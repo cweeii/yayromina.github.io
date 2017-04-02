@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a1cdf3e09fbd126dc6a9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6904b8716384fde7edce"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17761,9 +17761,9 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(run, 'run', '/Users/rominabarrett/react/rominaio/src/_core/index.js');
+	  __REACT_HOT_LOADER__.register(run, 'run', '/Users/rominabarrett/react/romina/src/_core/index.js');
 
-	  __REACT_HOT_LOADER__.register(loadedStates, 'loadedStates', '/Users/rominabarrett/react/rominaio/src/_core/index.js');
+	  __REACT_HOT_LOADER__.register(loadedStates, 'loadedStates', '/Users/rominabarrett/react/romina/src/_core/index.js');
 	}();
 
 	;
@@ -27339,9 +27339,9 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(App, 'App', '/Users/rominabarrett/react/rominaio/src/_core/app.js');
+	  __REACT_HOT_LOADER__.register(App, 'App', '/Users/rominabarrett/react/romina/src/_core/app.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/rominaio/src/_core/app.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/romina/src/_core/app.js');
 	}();
 
 	;
@@ -31520,7 +31520,7 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/rominaio/src/_core/styles.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/romina/src/_core/styles.js');
 	}();
 
 	;
@@ -31621,9 +31621,9 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(HomeView, 'HomeView', '/Users/rominabarrett/react/rominaio/src/views/HomeView/index.js');
+	  __REACT_HOT_LOADER__.register(HomeView, 'HomeView', '/Users/rominabarrett/react/romina/src/views/HomeView/index.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/rominaio/src/views/HomeView/index.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/rominabarrett/react/romina/src/views/HomeView/index.js');
 	}();
 
 	;
@@ -31648,7 +31648,7 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(_default, "default", "/Users/rominabarrett/react/rominaio/src/views/HomeView/styles.js");
+	  __REACT_HOT_LOADER__.register(_default, "default", "/Users/rominabarrett/react/romina/src/views/HomeView/styles.js");
 	}();
 
 	;
