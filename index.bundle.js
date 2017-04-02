@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "84eed33cdaf05c572440"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6904b8716384fde7edce"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -31600,7 +31600,7 @@
 	          _react2['default'].createElement(
 	            'h1',
 	            null,
-	            'It\'s about to get weird'
+	            'Romina Barrett'
 	          )
 	        );
 	      }
