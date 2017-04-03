@@ -1,18 +1,37 @@
 import React, {PropTypes} from 'react';
 
 import {StyleRoot} from 'radium';
+import pathData from '../../settings/paths.json';
 import styles from './styles';
 
-const App = props => (
-  <StyleRoot>
-    <div style={styles.base}>
-      {props.children}
-    </div>
-  </StyleRoot>
-);
+export default class App extends React.Component {
 
-App.propTypes = {
-  children: PropTypes.node,
-};
+  static propTypes = {
+    children: PropTypes.node,
+    route: PropTypes.object, // eslint-disable-line
+  }
 
-export default App;
+  state = {
+    loading: true,
+  }
+
+  toggleLoading = () => this.setState({ loading: !this.state.loading });
+
+  baseUrl = () => {
+    if (this.props && this.props.route && this.props.route.nodeEnd) {
+      return pathData[this.props.route.nodeEnv].base_url;
+    }
+    return '';
+  }
+
+  render() {
+    return (
+      <StyleRoot>
+        {React.cloneElement(this.props.children, {
+          baseUrl: this.baseUrl(),
+          toggleLoading: this.toggleLoading,
+        })}
+      </StyleRoot>
+    );
+  }
+}

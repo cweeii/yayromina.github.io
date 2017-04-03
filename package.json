@@ -39,7 +39,7 @@
     "html-webpack-plugin": "^2.22.0",
     "radium": "^0.18.1",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^15.4.2",
     "react-router": "^2.8.1",
     "react-tap-event-plugin": "^1.0.0",
     "webpack": "^1.13.2"
