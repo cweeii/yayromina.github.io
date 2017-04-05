@@ -12,11 +12,18 @@ import {
 
 import App from './app';
 import React from 'react';
+import ReactGA from 'react-ga';
 import {render}             from 'react-dom';
+
+ReactGA.initialize('UA-96611992-1');
+
+function fireTracking() {
+  ReactGA.pageview(window.location.hash);
+}
 
 function run() {
   render(
-    <Router history={hashHistory}>
+    <Router onUpdate={fireTracking} history={hashHistory}>
       <Route component={App}>
         <Route path="/" component={HomeView} />
         <Route path="/about" component={AboutView} />
