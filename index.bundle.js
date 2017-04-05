@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "791dd51b72a2660fd9c0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "856c8db0a49410c05b5e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -22186,7 +22186,7 @@
 
 	                  return ref;
 	                }(), style: _styles2['default'].tagline },
-	              'Senior Web Engineer &'
+	              'Senior Web Engineer'
 	            )
 	          )
 	        );
