@@ -3,10 +3,8 @@ export default {
     height: '100vh',
     width: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    paddingTop: 100,
+    flexDirection: 'row',
     flexWrap: 'nowrap',
-    alignItems: 'center',
     justifyContent: 'center',
   },
   headlines: {
@@ -22,30 +20,31 @@ export default {
     paddingTop: '100px',
     width: '100%',
   },
-  circle: {
+  circle: seen => ({
     height: 100,
     width: 100,
     borderRadius: '50%',
     background: '#7A1E48',
     margin: 'auto',
     display: 'block',
-    opacity: '1',
+    opacity: seen ? '0' : '1',
     position: 'absolute',
     top: 0,
-  },
-  flower: {
-    transform: 'scale(0.6)',
-  },
-  tagline: {
-    opacity: 0,
+  }),
+  flower: seen => ({
+    transform: seen ? 'scale(1.2,)' : 'scale(0.6)',
+  }),
+  tagline: seen => ({
+    opacity: seen ? '1' : '0',
+    transform: seen ? 'translateY(20px)' : 'none',
     marginTop: '-100px',
-  },
-  span: {
+  }),
+  span: seen => ({
     display: 'inline-block',
     // float: 'left',
-    transform: 'scaleY(0)',
-    opacity: '0',
-  },
+    transform: seen ? 'translateY(-85px)' : 'scaleY(0)',
+    opacity: seen ? '1' : '0',
+  }),
   logo: {
     height: 100,
     width: 100,
@@ -59,15 +58,27 @@ export default {
   headline: {
     fontSize: '2.5rem',
   },
-  socialLinks: {
+  socialLinks: seen => ({
     marginTop: '3rem',
-    opacity: '0',
-  },
+    opacity: seen ? '1' : '0',
+    transform: seen ? 'translateY(20px)' : 'none',
+  }),
+  navLinks: seen => ({
+    opacity: seen ? '1' : 0,
+    transform: seen ? 'translateY(20px)' : 'none',
+  }),
   socialLinksList: {
     textAlign: 'center',
     listStyleType: 'none',
   },
   homeContainer: {
-    width: '100%',
+    position: 'relative',
+    display: 'flex',
+    paddingTop: 100,
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'all 0.5s',
   },
 };
