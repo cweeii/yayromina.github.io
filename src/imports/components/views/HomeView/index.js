@@ -99,7 +99,7 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div style={styles.base}>
-        <div style={styles.homeContainer}>
+        <div style={styles.homeContainer} ref={(el) => { this.homeContainer = el; }}>
           <div style={styles.logoWrapper}>
             <div style={styles.logo} ref={(el) => { this.logo = el; }}>
               <div style={styles.flower} ref={(el) => { this.flower = el; }}>
