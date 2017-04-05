@@ -11,7 +11,7 @@ export default{
     },
   },
   socialIcon: hover => ({
-    color: hover ? '#341931' : '#59D2053',
+    color: hover ? '#571B3C' : '#9D2053',
     display: 'block',
     transition: 'all 0.2s',
   }),

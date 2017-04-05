@@ -28,7 +28,7 @@ export default class HomeView extends React.Component {
         duration: 150,
         scaleX: 0,
         scaleY: 0,
-        delay: 1650,
+        delay: 1580,
         targets: this.circle,
       });
       // flower animation
@@ -146,7 +146,7 @@ export default class HomeView extends React.Component {
                 <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline(this.props.seenAnimation)}>Senior Web Engineer</h2>
               </div>
               <div style={styles.navLinks(this.props.seenAnimation)} ref={(el) => { this.navLinks= el; }}>
-                
+
               </div>
               <div style={styles.socialLinks(this.props.seenAnimation)} ref={(el) => { this.socialLinks= el; }}>
                 <ul style={styles.socialLinksList}>
