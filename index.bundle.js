@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "85a2811da91150c2d648"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8e88736e928577f34964"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21931,13 +21931,13 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _logo = __webpack_require__(417);
-
-	var _logo2 = _interopRequireDefault(_logo);
-
 	var _react = __webpack_require__(383);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _logo = __webpack_require__(417);
+
+	var _logo2 = _interopRequireDefault(_logo);
 
 	var _socialLinks = __webpack_require__(602);
 
@@ -22028,7 +22028,8 @@
 	        duration: 800,
 	        targets: _this.socialLinks,
 	        opacity: 1,
-	        translateY: 20
+	        translateY: 20,
+	        complete: _this.props.seenAnimationToggle
 	      });
 	    }, _this.logoAnimation = function () {
 	      (0, _animejs2['default'])({
@@ -22077,7 +22078,13 @@
 	          { style: _styles2['default'].base },
 	          _react2['default'].createElement(
 	            'div',
-	            { style: _styles2['default'].homeContainer },
+	            { style: _styles2['default'].homeContainer, ref: function () {
+	                function ref(el) {
+	                  _this2.homeContainer = el;
+	                }
+
+	                return ref;
+	              }() },
 	            _react2['default'].createElement(
 	              'div',
 	              { style: _styles2['default'].logoWrapper },
@@ -22250,6 +22257,10 @@
 	  return HomeView;
 	}(_react2['default'].Component);
 
+	HomeView.propTypes = {
+	  seenAnimation: _react.PropTypes.bool,
+	  seenAnimationToggle: _react.PropTypes.func
+	};
 	var _default = HomeView;
 	exports['default'] = _default;
 	;
@@ -47089,6 +47100,8 @@
 
 	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MainLayout.__proto__ || Object.getPrototypeOf(MainLayout)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
 	      seenAnimation: false
+	    }, _this.seenAnimationToggle = function () {
+	      _this.setState({ seenAnimation: true });
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
@@ -47105,10 +47118,17 @@
 	    key: 'render',
 	    value: function () {
 	      function render() {
+	        var _this2 = this;
+
+	        var childrenWithProps = _react2['default'].Children.map(this.props.children, function (child) {
+	          return _react2['default'].cloneElement(child, {
+	            seenAnimation: _this2.state.seenAnimation, seenAnimationToggle: _this2.seenAnimationToggle
+	          });
+	        });
 	        return _react2['default'].createElement(
 	          'div',
 	          null,
-	          this.props.children
+	          childrenWithProps
 	        );
 	      }
 
