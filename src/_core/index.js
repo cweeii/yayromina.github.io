@@ -3,7 +3,7 @@ import {
   ContactView,
   HomeView,
   WorkView,
-} from '../components/views';
+} from '../imports/components/views';
 import {
   Route,
   Router,
