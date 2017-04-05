@@ -72,6 +72,7 @@ export default {
     listStyleType: 'none',
   },
   homeContainer: {
+    color: '#341931',
     position: 'relative',
     display: 'flex',
     paddingTop: 100,
