@@ -29,6 +29,9 @@ export default {
     position: 'absolute',
     top: 0,
   },
+  flower: {
+    transform: 'scale(0.6)',
+  },
   logo: {
     height: 100,
     width: 100,
