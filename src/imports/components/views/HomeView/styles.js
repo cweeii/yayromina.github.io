@@ -59,4 +59,15 @@ export default {
   headline: {
     fontSize: '2.5rem',
   },
+  socialLinks: {
+    marginTop: '3rem',
+    opacity: '0',
+  },
+  socialLinksList: {
+    textAlign: 'center',
+    listStyleType: 'none',
+  },
+  homeContainer: {
+    width: '100%',
+  },
 };

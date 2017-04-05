@@ -1,5 +1,6 @@
 import Logo from 'babel!svg-react!../../../../../static/images/branding/logo.svg?name=Logo'; //eslint-disable-line
 import React from 'react';
+import SocialLink from '../../general/socialLinks';
 import anime from 'animejs';
 import styles from './styles';
 
@@ -11,6 +12,7 @@ export default class HomeView extends React.Component {
     this.textAnimation();
     this.flowerAnimation();
     this.taglineAnimation();
+    this.socialLinksAnimation();
   }
 
   circleAnimation = () => {
@@ -64,6 +66,16 @@ export default class HomeView extends React.Component {
       translateY: 20,
     });
   }
+
+  socialLinksAnimation = () => {
+    anime({
+      delay: 3750,
+      duration: 800,
+      targets: this.socialLinks,
+      opacity: 1,
+      translateY: 20,
+    });
+  }
   logoAnimation = () => {
     anime({
       translateY: '150px',
@@ -87,32 +99,58 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div style={styles.base}>
-        <div style={styles.logoWrapper}>
-          <div style={styles.logo} ref={(el) => { this.logo = el; }}>
-            <div style={styles.flower} ref={(el) => { this.flower = el; }}>
-              <Logo />
+        <div style={styles.homeContainer}>
+          <div style={styles.logoWrapper}>
+            <div style={styles.logo} ref={(el) => { this.logo = el; }}>
+              <div style={styles.flower} ref={(el) => { this.flower = el; }}>
+                <Logo />
+              </div>
+              <div style={styles.circle} ref={(el) => { this.circle = el; }} />
             </div>
-            <div style={styles.circle} ref={(el) => { this.circle = el; }} />
           </div>
-        </div>
-        <div style={styles.headlines}>
-          <h1 style={styles.headline} className="title" ref={(el) => { this.headline = el; }}>
-            <span style={styles.span}>R</span>
-            <span style={styles.span}>o</span>
-            <span style={styles.span}>m</span>
-            <span style={styles.span}>i</span>
-            <span style={styles.span}>n</span>
-            <span style={styles.span}>a</span>
-            <span style={styles.span}>&nbsp;</span>
-            <span style={styles.span}>B</span>
-            <span style={styles.span}>a</span>
-            <span style={styles.span}>r</span>
-            <span style={styles.span}>r</span>
-            <span style={styles.span}>e</span>
-            <span style={styles.span}>t</span>
-            <span style={styles.span}>t</span>
-          </h1>
-          <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline}>Senior Web Engineer</h2>
+          <div style={styles.headlines}>
+            <h1 style={styles.headline} className="title" ref={(el) => { this.headline = el; }}>
+              <span style={styles.span}>R</span>
+              <span style={styles.span}>o</span>
+              <span style={styles.span}>m</span>
+              <span style={styles.span}>i</span>
+              <span style={styles.span}>n</span>
+              <span style={styles.span}>a</span>
+              <span style={styles.span}>&nbsp;</span>
+              <span style={styles.span}>B</span>
+              <span style={styles.span}>a</span>
+              <span style={styles.span}>r</span>
+              <span style={styles.span}>r</span>
+              <span style={styles.span}>e</span>
+              <span style={styles.span}>t</span>
+              <span style={styles.span}>t</span>
+            </h1>
+            <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline}>Senior Web Engineer</h2>
+          </div>
+          <div style={styles.socialLinks} ref={(el) => { this.socialLinks= el; }}>
+            <ul style={styles.socialLinksList}>
+              <SocialLink
+                url="https://www.linkedin.com/in/rominabarrett/"
+                icon="linkedin-square"
+                title="LinkedIn"
+              />
+              <SocialLink
+                url="https://github.com/yayromina"
+                icon="github"
+                title="Github"
+              />
+              <SocialLink
+                url="https://twitter.com/yayromina"
+                icon="twitter"
+                title="Twitter"
+              />
+              <SocialLink
+                url="https://open.spotify.com/user/yayromina"
+                icon="spotify"
+                title="Spotify"
+              />
+            </ul>
+          </div>
         </div>
       </div>
     );
