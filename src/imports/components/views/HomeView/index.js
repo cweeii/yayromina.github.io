@@ -1,3 +1,4 @@
+import Logo from 'babel!svg-react!../../../../../static/images/branding/logo.svg?name=Logo'; //eslint-disable-line
 import React from 'react';
 import anime from 'animejs';
 import styles from './styles';
@@ -21,6 +22,7 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div style={styles.base}>
+        <Logo />
         <div style={styles.headlines}>
           <h1 ref={(el) => { this.headline = el; }}>Romina Barrett</h1>
           <h2>Senior Web Engineer &amp; Animator</h2>
