@@ -6,13 +6,26 @@ import styles from './styles';
 export default class HomeView extends React.Component {
 
   componentDidMount() {
-    this.animate();
+    this.logoAnimation();
+    this.circleAnimation();
   }
 
-  animate = () => {
+  circleAnimation = () => {
+    anime({
+      easing: 'easeInCubic',
+      opacity: 0,
+      duration: 100,
+      scaleX: 0,
+      scaleY: 0,
+      delay: 1800,
+      targets: this.circle,
+    });
+  }
+
+  logoAnimation = () => {
     anime({
       translateY: '300px',
-      duration: 300,
+      duration: 350,
       direction: 'alternate',
       easing: 'easeInCubic',
       scaleX: {
@@ -25,7 +38,7 @@ export default class HomeView extends React.Component {
         duration: 125,
         delay: 268,
       },
-      loop: 4,
+      loop: 6,
       targets: this.logo,
     });
   }
@@ -35,6 +48,7 @@ export default class HomeView extends React.Component {
         <div style={styles.logoWrapper}>
           <div style={styles.logo} ref={(el) => { this.logo = el; }}>
             <Logo />
+            <div style={styles.circle} ref={(el) => { this.circle = el; }} />
           </div>
         </div>
         <div style={styles.headlines}>
