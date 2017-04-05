@@ -8,7 +8,9 @@ export default class HomeView extends React.Component {
   componentDidMount() {
     this.logoAnimation();
     this.circleAnimation();
+    this.textAnimation();
     this.flowerAnimation();
+    this.taglineAnimation();
   }
 
   circleAnimation = () => {
@@ -18,7 +20,7 @@ export default class HomeView extends React.Component {
       duration: 200,
       scaleX: 0,
       scaleY: 0,
-      delay: 1650,
+      delay: 1700,
       targets: this.circle,
     });
   }
@@ -40,9 +42,31 @@ export default class HomeView extends React.Component {
     });
   }
 
+  textAnimation = () => {
+    anime({
+      delay: 2720,
+      targets: '.title span',
+      translateY: '-85px',
+      scaleY: 1,
+      opacity: 1,
+      duration: function(el, i, l) {
+        return 1050 + (i * 30);
+      },
+    });
+  }
+
+  taglineAnimation = () => {
+    anime({
+      delay: 3250,
+      duration: 800,
+      targets: this.tagline,
+      opacity: 1,
+      translateY: 20,
+    });
+  }
   logoAnimation = () => {
     anime({
-      translateY: '300px',
+      translateY: '150px',
       duration: 350,
       direction: 'alternate',
       easing: 'easeInCubic',
@@ -72,8 +96,23 @@ export default class HomeView extends React.Component {
           </div>
         </div>
         <div style={styles.headlines}>
-          <h1 ref={(el) => { this.headline = el; }}>Romina Barrett</h1>
-          <h2>Senior Web Engineer &amp; Animator</h2>
+          <h1 style={styles.headline} className="title" ref={(el) => { this.headline = el; }}>
+            <span style={styles.span}>R</span>
+            <span style={styles.span}>o</span>
+            <span style={styles.span}>m</span>
+            <span style={styles.span}>i</span>
+            <span style={styles.span}>n</span>
+            <span style={styles.span}>a</span>
+            <span style={styles.span}>&nbsp;</span>
+            <span style={styles.span}>B</span>
+            <span style={styles.span}>a</span>
+            <span style={styles.span}>r</span>
+            <span style={styles.span}>r</span>
+            <span style={styles.span}>e</span>
+            <span style={styles.span}>t</span>
+            <span style={styles.span}>t</span>
+          </h1>
+          <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline}>Senior Web Engineer</h2>
         </div>
       </div>
     );

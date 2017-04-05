@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2c5617154b3630341002"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c62080830ad784419655"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21970,14 +21970,72 @@
 	      args[_key] = arguments[_key];
 	    }
 
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomeView.__proto__ || Object.getPrototypeOf(HomeView)).call.apply(_ref, [this].concat(args))), _this), _this.animate = function () {
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomeView.__proto__ || Object.getPrototypeOf(HomeView)).call.apply(_ref, [this].concat(args))), _this), _this.circleAnimation = function () {
 	      (0, _animejs2['default'])({
-	        translateY: 250,
-	        scale: 2,
-	        easing: 'easeInOutQuart',
-	        duration: 2000,
-	        elasticity: 1,
-	        targets: _this.headline
+	        easing: 'easeInCubic',
+	        opacity: 0,
+	        duration: 200,
+	        scaleX: 0,
+	        scaleY: 0,
+	        delay: 1700,
+	        targets: _this.circle
+	      });
+	    }, _this.flowerAnimation = function () {
+	      (0, _animejs2['default'])({
+	        easing: 'easeInCubic',
+	        duration: 400,
+	        scaleX: 1.2,
+	        scaleY: 1.2,
+	        delay: 1500,
+	        targets: _this.flower,
+	        rotate: {
+	          easing: 'easeOutCubic',
+	          value: 135,
+	          delay: 1650,
+	          duration: 900
+	        }
+	      });
+	    }, _this.textAnimation = function () {
+	      (0, _animejs2['default'])({
+	        delay: 2720,
+	        targets: '.title span',
+	        translateY: '-85px',
+	        scaleY: 1,
+	        opacity: 1,
+	        duration: function () {
+	          function duration(el, i, l) {
+	            return 1050 + i * 30;
+	          }
+
+	          return duration;
+	        }()
+	      });
+	    }, _this.taglineAnimation = function () {
+	      (0, _animejs2['default'])({
+	        delay: 3250,
+	        duration: 800,
+	        targets: _this.tagline,
+	        opacity: 1,
+	        translateY: 20
+	      });
+	    }, _this.logoAnimation = function () {
+	      (0, _animejs2['default'])({
+	        translateY: '150px',
+	        duration: 350,
+	        direction: 'alternate',
+	        easing: 'easeInCubic',
+	        scaleX: {
+	          value: 1.44,
+	          duration: 150,
+	          delay: 268
+	        },
+	        scaleY: {
+	          value: 0.95,
+	          duration: 125,
+	          delay: 268
+	        },
+	        loop: 6,
+	        targets: _this.logo
 	      });
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
@@ -21986,7 +22044,11 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
-	        // this.animate();
+	        this.logoAnimation();
+	        this.circleAnimation();
+	        this.textAnimation();
+	        this.flowerAnimation();
+	        this.taglineAnimation();
 	      }
 
 	      return componentDidMount;
@@ -22000,25 +22062,131 @@
 	        return _react2['default'].createElement(
 	          'div',
 	          { style: _styles2['default'].base },
-	          _react2['default'].createElement(_logo2['default'], null),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: _styles2['default'].logoWrapper },
+	            _react2['default'].createElement(
+	              'div',
+	              { style: _styles2['default'].logo, ref: function () {
+	                  function ref(el) {
+	                    _this2.logo = el;
+	                  }
+
+	                  return ref;
+	                }() },
+	              _react2['default'].createElement(
+	                'div',
+	                { style: _styles2['default'].flower, ref: function () {
+	                    function ref(el) {
+	                      _this2.flower = el;
+	                    }
+
+	                    return ref;
+	                  }() },
+	                _react2['default'].createElement(_logo2['default'], null)
+	              ),
+	              _react2['default'].createElement('div', { style: _styles2['default'].circle, ref: function () {
+	                  function ref(el) {
+	                    _this2.circle = el;
+	                  }
+
+	                  return ref;
+	                }() })
+	            )
+	          ),
 	          _react2['default'].createElement(
 	            'div',
 	            { style: _styles2['default'].headlines },
 	            _react2['default'].createElement(
 	              'h1',
-	              { ref: function () {
+	              { style: _styles2['default'].headline, className: 'title', ref: function () {
 	                  function ref(el) {
 	                    _this2.headline = el;
 	                  }
 
 	                  return ref;
 	                }() },
-	              'Romina Barrett'
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'R'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'o'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'm'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'i'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'n'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'a'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                '\xA0'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'B'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'a'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'r'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'r'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                'e'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                't'
+	              ),
+	              _react2['default'].createElement(
+	                'span',
+	                { style: _styles2['default'].span },
+	                't'
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'h2',
-	              null,
-	              'Senior Web Engineer & Animator'
+	              { ref: function () {
+	                  function ref(el) {
+	                    _this2.tagline = el;
+	                  }
+
+	                  return ref;
+	                }(), style: _styles2['default'].tagline },
+	              'Senior Web Engineer'
 	            )
 	          )
 	        );
@@ -22082,30 +22250,30 @@
 	            return React.createElement(
 	                'svg',
 	                this.props,
-	                React.createElement('path', { fill: '#000000', d: 'M11.912,48.58C7.543,43.873,5.101,37.795,5,31.36c4.623-4.48,10.648-7.05,17.063-7.289  c0.228,6.323,2.569,12.325,6.664,17.117C22.443,41.681,16.543,44.27,11.912,48.58z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M41.189,28.727c-4.792-4.095-10.793-6.437-17.118-6.664C24.311,15.646,26.881,9.622,31.36,5  c6.436,0.101,12.514,2.543,17.22,6.912C44.27,16.543,41.682,22.443,41.189,28.727z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M75.927,75.926c-6.405-0.246-12.418-2.817-17.032-7.293c-0.069-4.747-1.307-9.298-3.607-13.347  c4.048,2.302,8.599,3.539,13.346,3.608C73.108,63.508,75.68,69.52,75.927,75.926z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M88.087,48.58c-4.631-4.311-10.529-6.899-16.814-7.392c4.095-4.792,6.436-10.794,6.664-17.118  c6.416,0.239,12.441,2.81,17.063,7.29C94.898,37.795,92.456,43.873,88.087,48.58z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M58.812,28.727c-0.493-6.284-3.081-12.184-7.392-16.815C56.126,7.543,62.203,5.101,68.64,5  c4.479,4.622,7.049,10.646,7.289,17.063C69.605,22.291,63.604,24.632,58.812,28.727z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M22.063,75.927C15.648,75.688,9.623,73.118,5,68.639c0.101-6.436,2.543-12.513,6.912-17.219  c4.632,4.311,10.532,6.898,16.815,7.392C24.632,63.603,22.291,69.604,22.063,75.927z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M77.937,75.929c-0.229-6.324-2.569-12.326-6.664-17.117c6.284-0.493,12.184-3.081,16.814-7.392  c4.369,4.707,6.812,10.784,6.913,17.219C90.378,73.118,84.354,75.688,77.937,75.929z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M55.287,44.713c2.301-4.049,3.538-8.6,3.607-13.347c4.614-4.475,10.627-7.046,17.032-7.293  c-0.247,6.405-2.818,12.418-7.294,17.032C63.886,41.175,59.335,42.411,55.287,44.713z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M50,42.523c-1.235-4.491-3.579-8.583-6.886-11.988c0.099-6.427,2.532-12.496,6.886-17.201  c4.354,4.705,6.788,10.774,6.886,17.201C53.579,33.94,51.235,38.032,50,42.523z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M48.849,47.22c-3.125-3.872-5.062-8.55-5.591-13.497C46.382,37.595,48.32,42.273,48.849,47.22z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M51.15,47.22c0.529-4.946,2.468-9.625,5.593-13.497C56.214,38.669,54.275,43.348,51.15,47.22z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M69.465,56.885C66.06,53.578,61.967,51.235,57.476,50c4.49-1.236,8.584-3.58,11.989-6.887  c6.428,0.1,12.496,2.533,17.2,6.886C81.96,54.354,75.892,56.788,69.465,56.885z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M52.78,48.848c3.872-3.125,8.55-5.062,13.496-5.591C62.405,46.381,57.729,48.319,52.78,48.848z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M66.276,56.743c-4.946-0.529-9.625-2.468-13.497-5.593C57.728,51.68,62.405,53.618,66.276,56.743z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M24.073,75.926c0.247-6.405,2.818-12.417,7.293-17.031c4.747-0.069,9.297-1.307,13.347-3.608  c-2.302,4.048-3.539,8.6-3.609,13.347C36.491,73.108,30.479,75.68,24.073,75.926z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M30.535,56.885c-6.427-0.097-12.496-2.53-17.2-6.886c4.703-4.353,10.772-6.787,17.2-6.886  c3.406,3.308,7.498,5.651,11.99,6.887C38.032,51.235,33.94,53.578,30.535,56.885z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M47.22,48.848c-4.947-0.529-9.625-2.467-13.497-5.591C38.669,43.786,43.348,45.724,47.22,48.848z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M33.723,56.743c3.872-3.125,8.551-5.063,13.498-5.593C43.348,54.275,38.669,56.214,33.723,56.743z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M50,86.665c-4.354-4.705-6.788-10.774-6.886-17.201c3.308-3.405,5.651-7.498,6.886-11.988  c1.236,4.491,3.579,8.584,6.886,11.988C56.788,75.89,54.354,81.959,50,86.665z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M43.258,66.276c0.528-4.947,2.466-9.626,5.591-13.497C48.32,57.727,46.382,62.404,43.258,66.276z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M56.743,66.276c-3.125-3.871-5.063-8.55-5.593-13.497C54.275,56.65,56.214,61.33,56.743,66.276z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M31.36,95c-4.479-4.622-7.05-10.647-7.289-17.063c6.324-0.229,12.326-2.569,17.117-6.664  c0.493,6.285,3.081,12.184,7.392,16.814C43.875,92.455,37.797,94.897,31.36,95z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M44.714,44.713c-4.049-2.302-8.6-3.538-13.347-3.608c-4.475-4.614-7.046-10.627-7.293-17.033  c6.405,0.248,12.418,2.82,17.032,7.294C41.175,36.114,42.412,40.664,44.714,44.713z' }),
-	                React.createElement('path', { fill: '#000000', d: 'M68.64,95c-6.436-0.103-12.514-2.545-17.22-6.913c4.311-4.631,6.898-10.529,7.392-16.814  c4.791,4.095,10.793,6.436,17.117,6.664C75.688,84.354,73.118,90.378,68.64,95z' }),
+	                React.createElement('path', { d: 'M11.912,48.58C7.543,43.873,5.101,37.795,5,31.36c4.623-4.48,10.648-7.05,17.063-7.289  c0.228,6.323,2.569,12.325,6.664,17.117C22.443,41.681,16.543,44.27,11.912,48.58z' }),
+	                React.createElement('path', { d: 'M41.189,28.727c-4.792-4.095-10.793-6.437-17.118-6.664C24.311,15.646,26.881,9.622,31.36,5  c6.436,0.101,12.514,2.543,17.22,6.912C44.27,16.543,41.682,22.443,41.189,28.727z' }),
+	                React.createElement('path', { d: 'M75.927,75.926c-6.405-0.246-12.418-2.817-17.032-7.293c-0.069-4.747-1.307-9.298-3.607-13.347  c4.048,2.302,8.599,3.539,13.346,3.608C73.108,63.508,75.68,69.52,75.927,75.926z' }),
+	                React.createElement('path', { d: 'M88.087,48.58c-4.631-4.311-10.529-6.899-16.814-7.392c4.095-4.792,6.436-10.794,6.664-17.118  c6.416,0.239,12.441,2.81,17.063,7.29C94.898,37.795,92.456,43.873,88.087,48.58z' }),
+	                React.createElement('path', { d: 'M58.812,28.727c-0.493-6.284-3.081-12.184-7.392-16.815C56.126,7.543,62.203,5.101,68.64,5  c4.479,4.622,7.049,10.646,7.289,17.063C69.605,22.291,63.604,24.632,58.812,28.727z' }),
+	                React.createElement('path', { d: 'M22.063,75.927C15.648,75.688,9.623,73.118,5,68.639c0.101-6.436,2.543-12.513,6.912-17.219  c4.632,4.311,10.532,6.898,16.815,7.392C24.632,63.603,22.291,69.604,22.063,75.927z' }),
+	                React.createElement('path', { d: 'M77.937,75.929c-0.229-6.324-2.569-12.326-6.664-17.117c6.284-0.493,12.184-3.081,16.814-7.392  c4.369,4.707,6.812,10.784,6.913,17.219C90.378,73.118,84.354,75.688,77.937,75.929z' }),
+	                React.createElement('path', { d: 'M55.287,44.713c2.301-4.049,3.538-8.6,3.607-13.347c4.614-4.475,10.627-7.046,17.032-7.293  c-0.247,6.405-2.818,12.418-7.294,17.032C63.886,41.175,59.335,42.411,55.287,44.713z' }),
+	                React.createElement('path', { d: 'M50,42.523c-1.235-4.491-3.579-8.583-6.886-11.988c0.099-6.427,2.532-12.496,6.886-17.201  c4.354,4.705,6.788,10.774,6.886,17.201C53.579,33.94,51.235,38.032,50,42.523z' }),
+	                React.createElement('path', { d: 'M48.849,47.22c-3.125-3.872-5.062-8.55-5.591-13.497C46.382,37.595,48.32,42.273,48.849,47.22z' }),
+	                React.createElement('path', { d: 'M51.15,47.22c0.529-4.946,2.468-9.625,5.593-13.497C56.214,38.669,54.275,43.348,51.15,47.22z' }),
+	                React.createElement('path', { d: 'M69.465,56.885C66.06,53.578,61.967,51.235,57.476,50c4.49-1.236,8.584-3.58,11.989-6.887  c6.428,0.1,12.496,2.533,17.2,6.886C81.96,54.354,75.892,56.788,69.465,56.885z' }),
+	                React.createElement('path', { d: 'M52.78,48.848c3.872-3.125,8.55-5.062,13.496-5.591C62.405,46.381,57.729,48.319,52.78,48.848z' }),
+	                React.createElement('path', { d: 'M66.276,56.743c-4.946-0.529-9.625-2.468-13.497-5.593C57.728,51.68,62.405,53.618,66.276,56.743z' }),
+	                React.createElement('path', { d: 'M24.073,75.926c0.247-6.405,2.818-12.417,7.293-17.031c4.747-0.069,9.297-1.307,13.347-3.608  c-2.302,4.048-3.539,8.6-3.609,13.347C36.491,73.108,30.479,75.68,24.073,75.926z' }),
+	                React.createElement('path', { d: 'M30.535,56.885c-6.427-0.097-12.496-2.53-17.2-6.886c4.703-4.353,10.772-6.787,17.2-6.886  c3.406,3.308,7.498,5.651,11.99,6.887C38.032,51.235,33.94,53.578,30.535,56.885z' }),
+	                React.createElement('path', { d: 'M47.22,48.848c-4.947-0.529-9.625-2.467-13.497-5.591C38.669,43.786,43.348,45.724,47.22,48.848z' }),
+	                React.createElement('path', { d: 'M33.723,56.743c3.872-3.125,8.551-5.063,13.498-5.593C43.348,54.275,38.669,56.214,33.723,56.743z' }),
+	                React.createElement('path', { d: 'M50,86.665c-4.354-4.705-6.788-10.774-6.886-17.201c3.308-3.405,5.651-7.498,6.886-11.988  c1.236,4.491,3.579,8.584,6.886,11.988C56.788,75.89,54.354,81.959,50,86.665z' }),
+	                React.createElement('path', { d: 'M43.258,66.276c0.528-4.947,2.466-9.626,5.591-13.497C48.32,57.727,46.382,62.404,43.258,66.276z' }),
+	                React.createElement('path', { d: 'M56.743,66.276c-3.125-3.871-5.063-8.55-5.593-13.497C54.275,56.65,56.214,61.33,56.743,66.276z' }),
+	                React.createElement('path', { d: 'M31.36,95c-4.479-4.622-7.05-10.647-7.289-17.063c6.324-0.229,12.326-2.569,17.117-6.664  c0.493,6.285,3.081,12.184,7.392,16.814C43.875,92.455,37.797,94.897,31.36,95z' }),
+	                React.createElement('path', { d: 'M44.714,44.713c-4.049-2.302-8.6-3.538-13.347-3.608c-4.475-4.614-7.046-10.627-7.293-17.033  c6.405,0.248,12.418,2.82,17.032,7.294C41.175,36.114,42.412,40.664,44.714,44.713z' }),
+	                React.createElement('path', { d: 'M68.64,95c-6.436-0.103-12.514-2.545-17.22-6.913c4.311-4.631,6.898-10.529,7.392-16.814  c4.791,4.095,10.793,6.436,17.117,6.664C75.688,84.354,73.118,90.378,68.64,95z' }),
 	                React.Children.map(children, function (c) {
 	                    return c;
 	                })
@@ -40769,13 +40937,61 @@
 	    height: '100vh',
 	    width: '100%',
 	    display: 'flex',
+	    flexDirection: 'column',
+	    paddingTop: 100,
+	    flexWrap: 'nowrap',
 	    alignItems: 'center',
 	    justifyContent: 'center'
 	  },
 	  headlines: {
+	    // display: 'none',
+	    marginTop: '-100px',
 	    lineHeight: '2.6rem',
 	    textAlign: 'center',
+	    position: 'relative',
+	    top: '20px',
 	    width: '100%'
+	  },
+	  logoWrapper: {
+	    paddingTop: '100px',
+	    width: '100%'
+	  },
+	  circle: {
+	    height: 100,
+	    width: 100,
+	    borderRadius: '50%',
+	    background: '#7A1E48',
+	    margin: 'auto',
+	    display: 'block',
+	    opacity: '1',
+	    position: 'absolute',
+	    top: 0
+	  },
+	  flower: {
+	    transform: 'scale(0.6)'
+	  },
+	  tagline: {
+	    opacity: 0,
+	    marginTop: '-100px'
+	  },
+	  span: {
+	    display: 'inline-block',
+	    // float: 'left',
+	    transform: 'scaleY(0)',
+	    opacity: '0'
+	  },
+	  logo: {
+	    height: 100,
+	    width: 100,
+	    fill: '#7A1E48',
+	    margin: '-150px auto auto',
+	    display: 'block',
+	    opacity: 1,
+	    position: 'relative',
+	    top: '-170px'
+	  },
+	  headline: {
+	    fontSize: '2.5rem'
 	  }
 	};
 	exports['default'] = _default;
