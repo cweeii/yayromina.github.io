@@ -20,7 +20,7 @@ export default class HomeView extends React.Component {
       duration: 200,
       scaleX: 0,
       scaleY: 0,
-      delay: 1700,
+      delay: 1675,
       targets: this.circle,
     });
   }

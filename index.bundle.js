@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c62080830ad784419655"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5be6ce9dae4389d039ee"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21977,7 +21977,7 @@
 	        duration: 200,
 	        scaleX: 0,
 	        scaleY: 0,
-	        delay: 1700,
+	        delay: 1675,
 	        targets: _this.circle
 	      });
 	    }, _this.flowerAnimation = function () {
