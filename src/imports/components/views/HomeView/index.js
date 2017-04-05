@@ -1,10 +1,16 @@
+import React, {PropTypes} from 'react';
+
 import Logo from 'babel!svg-react!../../../../../static/images/branding/logo.svg?name=Logo'; //eslint-disable-line
-import React from 'react';
 import SocialLink from '../../general/socialLinks';
 import anime from 'animejs';
 import styles from './styles';
 
 export default class HomeView extends React.Component {
+
+  static propTypes = {
+    seenAnimation: PropTypes.bool,
+    seenAnimationToggle: PropTypes.func,
+  }
 
   componentDidMount() {
     this.logoAnimation();
@@ -74,6 +80,7 @@ export default class HomeView extends React.Component {
       targets: this.socialLinks,
       opacity: 1,
       translateY: 20,
+      complete: this.props.seenAnimationToggle,
     });
   }
   logoAnimation = () => {
