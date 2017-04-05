@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-import MainLayout from '../components/layouts/MainLayout';
+import MainLayout from '../imports/components/layouts/MainLayout';
 import {StyleRoot} from 'radium';
 import styles from './styles';
 
