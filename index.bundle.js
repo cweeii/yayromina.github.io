@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5be6ce9dae4389d039ee"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ae89de6b848400491274"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21974,10 +21974,10 @@
 	      (0, _animejs2['default'])({
 	        easing: 'easeInCubic',
 	        opacity: 0,
-	        duration: 200,
+	        duration: 150,
 	        scaleX: 0,
 	        scaleY: 0,
-	        delay: 1675,
+	        delay: 1650,
 	        targets: _this.circle
 	      });
 	    }, _this.flowerAnimation = function () {
@@ -22186,7 +22186,7 @@
 
 	                  return ref;
 	                }(), style: _styles2['default'].tagline },
-	              'Senior Web Engineer'
+	              'Senior Web Engineer & Animator'
 	            )
 	          )
 	        );

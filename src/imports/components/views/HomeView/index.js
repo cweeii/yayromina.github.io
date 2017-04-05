@@ -17,10 +17,10 @@ export default class HomeView extends React.Component {
     anime({
       easing: 'easeInCubic',
       opacity: 0,
-      duration: 200,
+      duration: 150,
       scaleX: 0,
       scaleY: 0,
-      delay: 1675,
+      delay: 1650,
       targets: this.circle,
     });
   }
@@ -112,7 +112,7 @@ export default class HomeView extends React.Component {
             <span style={styles.span}>t</span>
             <span style={styles.span}>t</span>
           </h1>
-          <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline}>Senior Web Engineer</h2>
+          <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline}>Senior Web Engineer &amp; Animator</h2>
         </div>
       </div>
     );
