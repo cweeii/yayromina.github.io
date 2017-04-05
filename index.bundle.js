@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "adf230ba154f4ee9312e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a3ace0605e33a421fda8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21962,7 +21962,7 @@
 	            _react2['default'].createElement(
 	              'h2',
 	              null,
-	              'Senior Web Engineer & Animator'
+	              'Senior Web Engineer & Animator...'
 	            )
 	          )
 	        );
