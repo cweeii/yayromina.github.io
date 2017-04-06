@@ -17,7 +17,6 @@ export default class HomeView extends React.Component {
 
   componentDidMount() {
     this.introAnimations();
-    console.log('new new delay');
   }
 
   introAnimations = () => {
@@ -29,7 +28,7 @@ export default class HomeView extends React.Component {
         duration: 150,
         scaleX: 0,
         scaleY: 0,
-        delay: 1580,
+        delay: 150,
         targets: this.circle,
       });
       // flower animation
@@ -49,7 +48,7 @@ export default class HomeView extends React.Component {
       });
       // text animation
       anime({
-        delay: 2690,
+        delay: 2720,
         targets: '.title span',
         translateY: '-85px',
         scaleY: 1,

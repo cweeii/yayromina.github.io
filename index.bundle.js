@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d3205ed13e90d61dfbb9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a5e6fbf797ff9f79ea19"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29919,7 +29919,7 @@
 /* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -29989,7 +29989,7 @@
 	          duration: 150,
 	          scaleX: 0,
 	          scaleY: 0,
-	          delay: 1580,
+	          delay: 150,
 	          targets: _this.circle
 	        });
 	        // flower animation
@@ -30009,7 +30009,7 @@
 	        });
 	        // text animation
 	        (0, _animejs2['default'])({
-	          delay: 2690,
+	          delay: 2720,
 	          targets: '.title span',
 	          translateY: '-85px',
 	          scaleY: 1,
@@ -30076,7 +30076,6 @@
 	    value: function () {
 	      function componentDidMount() {
 	        this.introAnimations();
-	        console.log('new new delay');
 	      }
 
 	      return componentDidMount;
@@ -30313,7 +30312,6 @@
 	}();
 
 	;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 580 */
