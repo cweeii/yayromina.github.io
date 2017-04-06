@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "21a6f53578a4b61669d6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d3205ed13e90d61dfbb9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30009,7 +30009,7 @@
 	        });
 	        // text animation
 	        (0, _animejs2['default'])({
-	          delay: 2620,
+	          delay: 2690,
 	          targets: '.title span',
 	          translateY: '-85px',
 	          scaleY: 1,
@@ -30076,7 +30076,7 @@
 	    value: function () {
 	      function componentDidMount() {
 	        this.introAnimations();
-	        console.log('new delay');
+	        console.log('new new delay');
 	      }
 
 	      return componentDidMount;
