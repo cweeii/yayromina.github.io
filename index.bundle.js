@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2c9382e80733e6161701"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "21a6f53578a4b61669d6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29919,7 +29919,7 @@
 /* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -30076,6 +30076,7 @@
 	    value: function () {
 	      function componentDidMount() {
 	        this.introAnimations();
+	        console.log('new delay');
 	      }
 
 	      return componentDidMount;
@@ -30312,6 +30313,7 @@
 	}();
 
 	;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 580 */

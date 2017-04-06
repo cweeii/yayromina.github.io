@@ -17,6 +17,7 @@ export default class HomeView extends React.Component {
 
   componentDidMount() {
     this.introAnimations();
+    console.log('new delay');
   }
 
   introAnimations = () => {
