@@ -13,7 +13,9 @@ export default class WorkView extends React.Component {
           finalStyle={{opacity: 1}}
         >
           <div style={styles.base}>
-            <h1>Work</h1>
+            <h1>My Work</h1>
+            <h2>Here are a few of my favorite past projects. I was the sole developer for all of these websites on both the front and backend.</h2>
+            <p>Looking for more or wondering if I've worked with a certain dev stack? Let's talk!</p>
           </div>
         </EasyTransition>
       </div>
