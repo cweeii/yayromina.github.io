@@ -1,8 +1,10 @@
 import EasyTransition from 'react-easy-transition';
 import React from 'react';
 import { hashHistory } from 'react-router';
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class AboutView extends React.Component {
   render() {
     return (
@@ -15,7 +17,7 @@ export default class AboutView extends React.Component {
         >
           <div style={styles.base}>
             <img src="../../../../static/images/branding/romina-large.png" style={styles.image} />
-            <h2 style={styles.tagline}>I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.</h2>
+            <h1 style={styles.headline}>I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.</h1>
             <div style={styles.halfTextWrapper}>
               <p style={styles.innerType}>I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through code; the goal of every request and pixel is a rewarding user experience. I also have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate user's needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.</p>
             </div>
