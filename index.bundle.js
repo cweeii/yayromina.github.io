@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b19c7f5c50ebbf385684"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9599a608bcd54e6fefcf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17724,7 +17724,7 @@
 
 	var _reactRouter = __webpack_require__(513);
 
-	var _app = __webpack_require__(836);
+	var _app = __webpack_require__(839);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -17732,7 +17732,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGa = __webpack_require__(843);
+	var _reactGa = __webpack_require__(847);
 
 	var _reactGa2 = _interopRequireDefault(_reactGa);
 
@@ -17862,18 +17862,24 @@
 	          _react2['default'].createElement(
 	            _reactEasyTransition2['default'],
 	            {
-	              path: location.pathname,
-	              initialStyle: { opacity: 0 },
+	              path: location.pathname //eslint-disable-line
+	              , initialStyle: { opacity: 0 },
 	              transition: 'opacity 0.3s ease-in',
 	              finalStyle: { opacity: 1 }
 	            },
 	            _react2['default'].createElement(
 	              'div',
 	              { style: _styles2['default'].base },
-	              _react2['default'].createElement('img', { src: '../../../../static/images/branding/romina-large.png', style: _styles2['default'].image }),
+	              _react2['default'].createElement('img', {
+	                src: '../../../../static/images/branding/romina-large.png',
+	                style: _styles2['default'].image,
+	                alt: 'Romina Barrett'
+	              }),
 	              _react2['default'].createElement(
 	                'h1',
-	                { style: _styles2['default'].headline },
+	                {
+	                  style: _styles2['default'].headline
+	                },
 	                'I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.'
 	              ),
 	              _react2['default'].createElement(
@@ -17882,7 +17888,7 @@
 	                _react2['default'].createElement(
 	                  'p',
 	                  { style: _styles2['default'].innerType },
-	                  'I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through code; the goal of every request and pixel is a rewarding user experience. I also have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate user\'s needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.'
+	                  'I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through code; the goal of every request and pixel is a rewarding user experience. I also have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate users\' needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.'
 	                )
 	              ),
 	              _react2['default'].createElement(
@@ -33923,7 +33929,7 @@
 	    fontSize: '1.4rem',
 	    padding: '1rem',
 	    lineHeight: '2rem',
-	    maxWidth: '60rem',
+	    maxWidth: '50rem',
 	    textAlign: 'center',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
@@ -33932,11 +33938,10 @@
 	  },
 	  innerType: {
 	    fontSize: '1.4rem',
-	    maxWidth: '60rem',
 	    padding: '1rem',
 	    lineHeight: '2rem',
 	    textAlign: 'center',
-	    width: '50%',
+	    width: '50rem',
 	    '@media screen and (max-width: 64em)': {
 	      fontSize: '1.2rem',
 	      padding: 0,
@@ -33958,10 +33963,9 @@
 	  },
 	  headline: {
 	    fontSize: '1.8rem',
-	    lineHeight: '2.2rem',
+	    lineHeight: '2.3rem',
 	    textAlign: 'center',
-	    maxWidth: '46rem',
-	    width: '50%',
+	    width: '46rem',
 	    '@media screen and (max-width: 64em)': {
 	      fontSize: '1.4rem',
 	      lineHeight: '1.8rem',
@@ -34057,6 +34061,18 @@
 	                'p',
 	                null,
 	                'I\'m excited to hear about what you have cookin\' and how I may help!'
+	              ),
+	              _react2['default'].createElement(
+	                'form',
+	                { method: 'POST', action: 'https://formspree.io/hi@romina.io' },
+	                _react2['default'].createElement('input', { type: 'text', name: 'name', placeholder: 'Name' }),
+	                _react2['default'].createElement('input', { type: 'email', name: 'email', placeholder: 'Email Address' }),
+	                _react2['default'].createElement('textarea', { name: 'message', rows: '4' }),
+	                _react2['default'].createElement(
+	                  'button',
+	                  { type: 'submit' },
+	                  'Send'
+	                )
 	              )
 	            )
 	          )
@@ -34076,13 +34092,25 @@
 /* 642 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports["default"] = {
-	  base: {}
+	exports['default'] = {
+	  base: {
+	    alignItems: 'center',
+	    minHeight: '100vh',
+	    width: '100%',
+	    display: 'flex',
+	    padding: '6rem 4rem 4rem',
+	    flexDirection: 'column',
+	    justifyContent: 'center',
+	    '@media screen and (max-width: 64em)': {
+	      padding: '1rem',
+	      marginBottom: '2rem'
+	    }
+	  }
 	};
 
 /***/ },
@@ -34124,8 +34152,6 @@
 	var _animejs = __webpack_require__(832);
 
 	var _animejs2 = _interopRequireDefault(_animejs);
-
-	var _reactRouter = __webpack_require__(513);
 
 	var _styles = __webpack_require__(833);
 
@@ -34180,15 +34206,16 @@
 	            duration: 900
 	          },
 	          begin: function () {
-	            function begin(anim) {
+	            function begin() {
 	              (0, _animejs2['default'])({
-	                delay: window.chrome ? 1180 : 800,
+	                delay: window.chrome ? 1180 : 800, //eslint-disable-line
 	                targets: '.title span',
 	                translateY: '-85px',
 	                scaleY: 1,
 	                opacity: 1,
 	                duration: function () {
 	                  function duration(el, i, l) {
+	                    //eslint-disable-line
 	                    return 1050 + i * 30;
 	                  }
 
@@ -34271,8 +34298,8 @@
 	          _react2['default'].createElement(
 	            _reactEasyTransition2['default'],
 	            {
-	              path: location.pathname,
-	              initialStyle: { opacity: 0 },
+	              path: location.pathname // eslint-disable-line
+	              , initialStyle: { opacity: 0 },
 	              transition: 'opacity 0.3s ease-in',
 	              finalStyle: { opacity: 1 }
 	            },
@@ -34305,22 +34332,28 @@
 	                      }() },
 	                    _react2['default'].createElement(
 	                      'div',
-	                      { style: _styles2['default'].flower(this.props.seenAnimation), ref: function () {
+	                      {
+	                        style: _styles2['default'].flower(this.props.seenAnimation),
+	                        ref: function () {
 	                          function ref(el) {
 	                            _this2.flower = el;
 	                          }
 
 	                          return ref;
-	                        }() },
+	                        }()
+	                      },
 	                      _react2['default'].createElement(_logo2['default'], null)
 	                    ),
-	                    _react2['default'].createElement('div', { style: _styles2['default'].circle(this.props.seenAnimation), ref: function () {
+	                    _react2['default'].createElement('div', {
+	                      style: _styles2['default'].circle(this.props.seenAnimation),
+	                      ref: function () {
 	                        function ref(el) {
 	                          _this2.circle = el;
 	                        }
 
 	                        return ref;
-	                      }() })
+	                      }()
+	                    })
 	                  )
 	                ),
 	                _react2['default'].createElement(
@@ -34408,32 +34441,45 @@
 	                  ),
 	                  _react2['default'].createElement(
 	                    'h2',
-	                    { ref: function () {
+	                    {
+	                      ref: function () {
 	                        function ref(el) {
 	                          _this2.tagline = el;
 	                        }
 
 	                        return ref;
-	                      }(), style: _styles2['default'].tagline(this.props.seenAnimation) },
+	                      }(),
+	                      style: _styles2['default'].tagline(this.props.seenAnimation)
+	                    },
 	                    'Senior Web Engineer'
 	                  )
 	                ),
-	                _react2['default'].createElement('div', { style: _styles2['default'].navLinks(this.props.seenAnimation), ref: function () {
-	                    function ref(el) {
-	                      _this2.navLinks = el;
-	                    }
-
-	                    return ref;
-	                  }() }),
 	                _react2['default'].createElement(
 	                  'div',
-	                  { style: _styles2['default'].socialLinks(this.props.seenAnimation), ref: function () {
+	                  {
+	                    style: _styles2['default'].navLinks(this.props.seenAnimation),
+	                    ref: function () {
+	                      function ref(el) {
+	                        _this2.navLinks = el;
+	                      }
+
+	                      return ref;
+	                    }()
+	                  },
+	                  _react2['default'].createElement(_navigation2['default'], null)
+	                ),
+	                _react2['default'].createElement(
+	                  'div',
+	                  {
+	                    style: _styles2['default'].socialLinks(this.props.seenAnimation),
+	                    ref: function () {
 	                      function ref(el) {
 	                        _this2.socialLinks = el;
 	                      }
 
 	                      return ref;
-	                    }() },
+	                    }()
+	                  },
 	                  _react2['default'].createElement(
 	                    'ul',
 	                    { style: _styles2['default'].socialLinksList },
@@ -53537,7 +53583,7 @@
 /* 834 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -53546,15 +53592,29 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _class;
+
 	var _reactEasyTransition = __webpack_require__(383);
 
 	var _reactEasyTransition2 = _interopRequireDefault(_reactEasyTransition);
+
+	var _Project = __webpack_require__(835);
+
+	var _Project2 = _interopRequireDefault(_Project);
 
 	var _react = __webpack_require__(475);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(835);
+	var _portfolio = __webpack_require__(837);
+
+	var _portfolio2 = _interopRequireDefault(_portfolio);
+
+	var _radium = __webpack_require__(576);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
+	var _styles = __webpack_require__(838);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -53566,16 +53626,37 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var WorkView = function (_React$Component) {
+	var WorkView = (0, _radium2['default'])(_class = function (_React$Component) {
 	  _inherits(WorkView, _React$Component);
 
 	  function WorkView() {
+	    var _ref;
+
+	    var _temp, _this, _ret;
+
 	    _classCallCheck(this, WorkView);
 
-	    return _possibleConstructorReturn(this, (WorkView.__proto__ || Object.getPrototypeOf(WorkView)).apply(this, arguments));
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = WorkView.__proto__ || Object.getPrototypeOf(WorkView)).call.apply(_ref, [this].concat(args))), _this), _this.mapObject = function (object, callback) {
+	      return Object.keys(object).map(function (key) {
+	        return callback(key, object[key]);
+	      });
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
 	  _createClass(WorkView, [{
+	    key: 'componentDidMount',
+	    value: function () {
+	      function componentDidMount() {
+	        console.log(_portfolio2['default']);
+	      }
+
+	      return componentDidMount;
+	    }()
+	  }, {
 	    key: 'render',
 	    value: function () {
 	      function render() {
@@ -53585,8 +53666,8 @@
 	          _react2['default'].createElement(
 	            _reactEasyTransition2['default'],
 	            {
-	              path: location.pathname,
-	              initialStyle: { opacity: 0 },
+	              path: location.pathname //eslint-disable-line
+	              , initialStyle: { opacity: 0 },
 	              transition: 'opacity 0.3s ease-in',
 	              finalStyle: { opacity: 1 }
 	            },
@@ -53595,8 +53676,250 @@
 	              { style: _styles2['default'].base },
 	              _react2['default'].createElement(
 	                'h1',
+	                { style: _styles2['default'].headline },
+	                'Here are a few of my favorite past projects! I was the sole developer for these websites, client and server-side.'
+	              ),
+	              _react2['default'].createElement(
+	                'h2',
+	                { style: _styles2['default'].tagline },
+	                'I currently specialize in React and Wordpress projects.'
+	              ),
+	              _react2['default'].createElement(
+	                'div',
 	                null,
-	                'Work'
+	                _react2['default'].createElement(
+	                  'div',
+	                  { style: _styles2['default'].projectBase },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { style: _styles2['default'].projectWrapper },
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectImageWrapper('odd') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://campforall.org/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectImage,
+	                          src: '../../../../../static/images/portfolio/campforall.png',
+	                          alt: 'Romina Barrett and Camp For All',
+	                          key: 'Camp For All Image'
+	                        })
+	                      )
+	                    ),
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectDescriptionWrapper('odd') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://campforall.org/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo,
+	                          src: '../../../../../static/images/portfolio/campforall-logo.png',
+	                          alt: 'Camp For All Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'p',
+	                        null,
+	                        'Camp For All is a unique, barrier free camp working to enrich the lives of children and adults with challenging illnesses or special needs. Their site allows potential campers and parents to effortlessly find camps and enables volunteers to apply and join the organization. The Camp For All team may update and add new camps and promotional pages with an easy-to-use and robust backend.'
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://campforall.org/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        'Visit Camp For All'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2['default'].createElement(
+	                  'div',
+	                  { style: _styles2['default'].projectBase },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { style: _styles2['default'].projectWrapper },
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectImageWrapper('even') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://emota.com',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectImage,
+	                          src: '../../../../../static/images/portfolio/emota.png',
+	                          alt: 'Romina Barrett and Emota',
+	                          key: 'Emota Image'
+	                        })
+	                      )
+	                    ),
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectDescriptionWrapper('even') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://emota.com',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo,
+	                          src: '../../../../../static/images/portfolio/emota-logo.png',
+	                          alt: 'Emota Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'p',
+	                        null,
+	                        'Emota is a web agency located in San Diego dedicated to helping brands imagine and create award-winning video content that transforms customers into fans. I built three custom video players that are in use throughout the site and is powered by Angular on top of a Wordpress-powered API.'
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://emota.com',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        'Visit Emota'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2['default'].createElement(
+	                  'div',
+	                  { style: _styles2['default'].projectBase },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { style: _styles2['default'].projectWrapper },
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectImageWrapper('odd') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://invisionstudio.com/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectImage,
+	                          src: '../../../../../static/images/portfolio/invision.png',
+	                          alt: 'Romina Barrett and Invision Studio',
+	                          key: 'Invision Image'
+	                        })
+	                      )
+	                    ),
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectDescriptionWrapper('odd') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://invisionstudio.com/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo,
+	                          src: '../../../../../static/images/portfolio/invision-logo.png',
+	                          alt: 'Invision Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'p',
+	                        null,
+	                        'Invision Studio is a property photography company specializing in 360\xB0 Photography, Architectural Photography, and Aerial Photography Services. Their site highlights their virtual tours, features VR and 360\xB0 video players, and a custom quote builder to help them reach potential clients.'
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://invisionstudio.com/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        'Visit Invision Studio'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2['default'].createElement(
+	                  'div',
+	                  { style: _styles2['default'].projectBase },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { style: _styles2['default'].projectWrapper },
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectImageWrapper('even') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://reachify.io',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectImage,
+	                          src: '../../../../../static/images/portfolio/reachify.png',
+	                          alt: 'Romina Barrett and Reachify',
+	                          key: 'Reachify Image'
+	                        })
+	                      )
+	                    ),
+	                    _react2['default'].createElement(
+	                      'div',
+	                      { style: _styles2['default'].projectDescriptionWrapper('even') },
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://reachify.io',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo,
+	                          src: '../../../../../static/images/portfolio/reachify-logo.png',
+	                          alt: 'Reachify Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'p',
+	                        null,
+	                        'Reachify is an omnichannel business communication tool to help businesses connect with customers and collaborate with their team. I built their website with a robust backend, enabling them to update their content and media easily, as well as a custom-built CRM in the backend.'
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://reachify.io',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        'Visit Reachify'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2['default'].createElement(
+	                  'p',
+	                  { style: _styles2['default'].footerType },
+	                  'These are just a few of the sites that I\'ve worked on. Want to see more? Let\'s talk!'
+	                )
 	              )
 	            )
 	          )
@@ -53608,12 +53931,114 @@
 	  }]);
 
 	  return WorkView;
-	}(_react2['default'].Component);
+	}(_react2['default'].Component)) || _class;
 
 	exports['default'] = WorkView;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 835 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports['default'] = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _class, _temp2;
+
+	var _react = __webpack_require__(475);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(836);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Project = (_temp2 = _class = function (_React$Component) {
+	  _inherits(Project, _React$Component);
+
+	  function Project() {
+	    var _ref;
+
+	    var _temp, _this, _ret;
+
+	    _classCallCheck(this, Project);
+
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Project.__proto__ || Object.getPrototypeOf(Project)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	      index: _this.props.index
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+
+	  _createClass(Project, [{
+	    key: 'componentDidMount',
+	    value: function () {
+	      function componentDidMount() {
+	        console.log(this.props.url);
+	      }
+
+	      return componentDidMount;
+	    }()
+	  }, {
+	    key: 'render',
+	    value: function () {
+	      function render() {
+	        return _react2['default'].createElement(
+	          'div',
+	          { style: _styles2['default'].base },
+	          _react2['default'].createElement('img', { src: this.props.image, alt: this.props.title }),
+	          _react2['default'].createElement(
+	            'h1',
+	            null,
+	            this.props.title
+	          ),
+	          _react2['default'].createElement(
+	            'p',
+	            null,
+	            this.props.description
+	          ),
+	          _react2['default'].createElement(
+	            'a',
+	            { href: this.props.url, target: '_blank', rel: 'noreferrer noopener' },
+	            'Visit ',
+	            this.props.title
+	          )
+	        );
+	      }
+
+	      return render;
+	    }()
+	  }]);
+
+	  return Project;
+	}(_react2['default'].Component), _class.propTypes = {
+	  title: _react.PropTypes.string,
+	  description: _react.PropTypes.string,
+	  index: _react.PropTypes.number,
+	  url: _react.PropTypes.string,
+	  image: _react.PropTypes.string
+	}, _temp2);
+	exports['default'] = Project;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
+
+/***/ },
+/* 836 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -53626,7 +54051,163 @@
 	};
 
 /***/ },
-/* 836 */
+/* 837 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports['default'] = {
+	  emota: {
+	    title: 'Emota',
+	    url: 'http://emota.com',
+	    description: 'Emota is an Emmy Award winning web agency dedicated to helping brands imagine and create award-winning video content that transforms customers into fans. The website is powered by Angular on top of a Wordpress-powered API, features hidden easter eggs a la films, and has three custom video players that I wrote by hand to showcase their work.'
+	  },
+	  campForAll: {
+	    title: 'Camp For All',
+	    url: 'http://campforall.org/',
+	    description: 'Camp For All is a unique, barrier free camp working to enrich the lives of children and adults with challenging illnesses or special needs. Their site allows potential campers and parents to effortlessly find camps and enables volunteers to apply and join the organization. The Camp For All team may update and add new camps and promotional pages with an easy-to-use and robust backend.'
+	  },
+	  invision: {
+	    title: 'Invision Studio',
+	    url: 'http://invisionstudio.com/',
+	    description: 'Invision Studio is a property photography company specializing in 360° Photography, Architectural Photography, and Aerial Photography Services. Their site highlights their virtual tours, features VR and 360° video players, and a custom quote builder to help them reach potential clients.'
+	  },
+	  reachify: {
+	    title: 'Reachify',
+	    url: 'http://reachify.io',
+	    description: 'Reachify is an omnichannel business communication tool to help businesses connect with customers and collaborate with their team. I built their website with a robust backend, enabling them to update their content and media easily, as well as a custom-built CRM in the backend.'
+	  }
+	};
+
+/***/ },
+/* 838 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports['default'] = {
+	  base: {
+	    alignItems: 'center',
+	    minHeight: '100vh',
+	    width: '100%',
+	    display: 'flex',
+	    padding: '6rem 4rem 4rem',
+	    flexDirection: 'column',
+	    justifyContent: 'center',
+	    '@media screen and (max-width: 64em)': {
+	      padding: '1rem',
+	      marginBottom: '2rem'
+	    }
+	  },
+	  headline: {
+	    fontSize: '1.8rem',
+	    lineHeight: '2.3rem',
+	    marginBottom: '1rem',
+	    textAlign: 'center',
+	    width: '46rem',
+	    '@media screen and (max-width: 46.5em)': {
+	      maxWidth: '90%'
+	    }
+	  },
+	  tagline: {
+	    fontSize: '1.4rem',
+	    lineHeight: '1.8rem',
+	    marginBottom: '2rem',
+	    textAlign: 'center',
+	    '@media screen and (max-width: 64em)': {
+	      marginBottom: '1rem'
+	    }
+	  },
+	  projectTitle: {
+	    display: 'flex',
+	    fontSize: '1.4rem',
+	    width: '100%',
+	    '@media screen and (max-width: 64em)': {
+	      textAlign: 'center'
+	    }
+	  },
+	  projectWrapper: {
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    marginBottom: '5vh',
+	    padding: '2rem',
+	    flexDirection: 'row',
+	    width: '100%',
+	    '@media screen and (max-width: 64em)': {
+	      flexDirection: 'column',
+	      marginBottom: '0',
+	      padding: 0
+	    }
+	  },
+	  projectLogo: {
+	    maxWidth: '65%',
+	    display: 'block',
+	    margin: '0 auto 1.6rem',
+	    '@media screen and (max-width: 64em)': {
+	      width: '100%',
+	      maxWidth: 200
+	    }
+	  },
+	  projectImage: {
+	    borderRadius: '3px',
+	    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15)',
+	    height: 'auto',
+	    maxWidth: '100%',
+	    transition: 'all 0.2s',
+	    ':hover': {
+	      boxShadow: '0 14px 24px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15)'
+	    }
+	  },
+	  projectImageWrapper: function () {
+	    function projectImageWrapper(order) {
+	      return {
+	        padding: '2rem',
+	        order: order === 'odd' ? '1' : '2',
+	        width: '66%',
+	        '@media screen and (max-width: 64em)': {
+	          order: '2',
+	          width: '100%'
+	        }
+	      };
+	    }
+
+	    return projectImageWrapper;
+	  }(),
+	  projectDescriptionWrapper: function () {
+	    function projectDescriptionWrapper(order) {
+	      return {
+	        fontSize: '1.4rem',
+	        lineHeight: '1.8rem',
+	        textAlign: 'center',
+	        padding: '0.8rem',
+	        order: order === 'odd' ? '2' : '1',
+	        width: '33%',
+	        '@media screen and (max-width: 64em)': {
+	          marginTop: '2rem',
+	          order: '1',
+	          width: '100%'
+	        }
+	      };
+	    }
+
+	    return projectDescriptionWrapper;
+	  }(),
+	  footerType: {
+	    fontSize: '1.2rem',
+	    marginTop: '1rem',
+	    textAlign: 'center'
+	  }
+	};
+
+/***/ },
+/* 839 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53639,13 +54220,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _MainLayout = __webpack_require__(837);
+	var _MainLayout = __webpack_require__(840);
 
 	var _MainLayout2 = _interopRequireDefault(_MainLayout);
 
 	var _radium = __webpack_require__(576);
 
-	var _styles = __webpack_require__(842);
+	var _styles = __webpack_require__(846);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -53672,7 +54253,7 @@
 	exports['default'] = App;
 
 /***/ },
-/* 837 */
+/* 840 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
@@ -53690,9 +54271,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _nodeEmoji = __webpack_require__(838);
+	var _nodeEmoji = __webpack_require__(841);
 
 	var _nodeEmoji2 = _interopRequireDefault(_nodeEmoji);
+
+	var _styles = __webpack_require__(845);
+
+	var _styles2 = _interopRequireDefault(_styles);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -53745,7 +54330,7 @@
 	        });
 	        return _react2['default'].createElement(
 	          'div',
-	          null,
+	          { style: _styles2['default'].base },
 	          childrenWithProps
 	        );
 	      }
@@ -53762,17 +54347,17 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
-/* 838 */
+/* 841 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(839);
+	module.exports = __webpack_require__(842);
 
 /***/ },
-/* 839 */
+/* 842 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*jslint node: true*/
-	__webpack_require__(840);
+	__webpack_require__(843);
 
 	"use strict";
 
@@ -53805,7 +54390,7 @@
 	 * Emoji namespace
 	 */
 	var Emoji = module.exports = {
-	  emoji: __webpack_require__(841)
+	  emoji: __webpack_require__(844)
 	};
 
 	/**
@@ -53902,7 +54487,7 @@
 
 
 /***/ },
-/* 840 */
+/* 843 */
 /***/ function(module, exports) {
 
 	/*! http://mths.be/codepointat v0.2.0 by @mathias */
@@ -53962,7 +54547,7 @@
 
 
 /***/ },
-/* 841 */
+/* 844 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -55310,7 +55895,24 @@
 	};
 
 /***/ },
-/* 842 */
+/* 845 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports['default'] = {
+	  base: {
+	    width: '100%',
+	    margin: 'auto',
+	    maxWidth: 1600
+	  }
+	};
+
+/***/ },
+/* 846 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55328,7 +55930,7 @@
 	};
 
 /***/ },
-/* 843 */
+/* 847 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -55342,12 +55944,12 @@
 	/**
 	 * Utilities
 	 */
-	var format = __webpack_require__(844);
-	var removeLeadingSlash = __webpack_require__(849);
-	var trim = __webpack_require__(847);
+	var format = __webpack_require__(848);
+	var removeLeadingSlash = __webpack_require__(853);
+	var trim = __webpack_require__(851);
 
-	var warn = __webpack_require__(848);
-	var log = __webpack_require__(850);
+	var warn = __webpack_require__(852);
+	var log = __webpack_require__(854);
 
 	var _debug = false;
 	var _titleCase = true;
@@ -55820,7 +56422,7 @@
 	  }
 	};
 
-	var OutboundLink = __webpack_require__(851);
+	var OutboundLink = __webpack_require__(855);
 	OutboundLink.origTrackLink = OutboundLink.trackLink;
 	OutboundLink.trackLink = ReactGA.outboundLink.bind(ReactGA);
 	ReactGA.OutboundLink = OutboundLink;
@@ -55829,12 +56431,12 @@
 
 
 /***/ },
-/* 844 */
+/* 848 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mightBeEmail = __webpack_require__(845);
-	var toTitleCase = __webpack_require__(846);
-	var warn = __webpack_require__(848);
+	var mightBeEmail = __webpack_require__(849);
+	var toTitleCase = __webpack_require__(850);
+	var warn = __webpack_require__(852);
 
 	var _redacted = 'REDACTED (Potential Email Address)';
 
@@ -55855,7 +56457,7 @@
 
 
 /***/ },
-/* 845 */
+/* 849 */
 /***/ function(module, exports) {
 
 	// See if s could be an email address. We don't want to send personal data like email.
@@ -55869,7 +56471,7 @@
 
 
 /***/ },
-/* 846 */
+/* 850 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -55878,7 +56480,7 @@
 	 * https://github.com/gouch/to-title-case
 	 */
 
-	var trim = __webpack_require__(847);
+	var trim = __webpack_require__(851);
 
 	function toTitleCase(s) {
 	  var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
@@ -55906,7 +56508,7 @@
 
 
 /***/ },
-/* 847 */
+/* 851 */
 /***/ function(module, exports) {
 
 	// GA strings need to have leading/trailing whitespace trimmed, and not all
@@ -55920,7 +56522,7 @@
 
 
 /***/ },
-/* 848 */
+/* 852 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {function warn(s) {
@@ -55932,7 +56534,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
-/* 849 */
+/* 853 */
 /***/ function(module, exports) {
 
 	function removeLeadingSlash(s) {
@@ -55947,7 +56549,7 @@
 
 
 /***/ },
-/* 850 */
+/* 854 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {function log(s) {
@@ -55959,7 +56561,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
-/* 851 */
+/* 855 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {var React = __webpack_require__(475);
