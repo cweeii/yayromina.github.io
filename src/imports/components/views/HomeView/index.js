@@ -46,12 +46,12 @@ export default class HomeView extends React.Component {
         },
         begin: () => {
           anime({
-            delay: window.chrome ? 1180 : 800,
+            delay: window.chrome ? 1180 : 800, //eslint-disable-line
             targets: '.title span',
             translateY: '-85px',
             scaleY: 1,
             opacity: 1,
-            duration: function(el, i, l) {
+            duration: function(el, i, l) { //eslint-disable-line
               return 1050 + (i * 30);
             },
           });
@@ -109,7 +109,7 @@ export default class HomeView extends React.Component {
     return (
       <div>
         <EasyTransition
-          path={location.pathname}
+          path={location.pathname} // eslint-disable-line
           initialStyle={{opacity: 0}}
           transition="opacity 0.3s ease-in"
           finalStyle={{opacity: 1}}
@@ -121,10 +121,16 @@ export default class HomeView extends React.Component {
             >
               <div style={styles.logoWrapper}>
                 <div style={styles.logo} ref={(el) => { this.logo = el; }}>
-                  <div style={styles.flower(this.props.seenAnimation)} ref={(el) => { this.flower = el; }}>
+                  <div
+                    style={styles.flower(this.props.seenAnimation)}
+                    ref={(el) => { this.flower = el; }}
+                  >
                     <Logo />
                   </div>
-                  <div style={styles.circle(this.props.seenAnimation)} ref={(el) => { this.circle = el; }} />
+                  <div
+                    style={styles.circle(this.props.seenAnimation)}
+                    ref={(el) => { this.circle = el; }}
+                  />
                 </div>
               </div>
               <div style={styles.headlines}>
@@ -144,12 +150,21 @@ export default class HomeView extends React.Component {
                   <span style={styles.span(this.props.seenAnimation)}>t</span>
                   <span style={styles.span(this.props.seenAnimation)}>t</span>
                 </h1>
-                <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline(this.props.seenAnimation)}>Senior Web Engineer</h2>
+                <h2
+                  ref={(el) => { this.tagline = el; }}
+                  style={styles.tagline(this.props.seenAnimation)}
+                >Senior Web Engineer</h2>
               </div>
-              <div style={styles.navLinks(this.props.seenAnimation)} ref={(el) => { this.navLinks= el; }}>
+              <div
+                style={styles.navLinks(this.props.seenAnimation)}
+                ref={(el) => { this.navLinks = el; }}
+              >
                 <Navigation />
               </div>
-              <div style={styles.socialLinks(this.props.seenAnimation)} ref={(el) => { this.socialLinks= el; }}>
+              <div
+                style={styles.socialLinks(this.props.seenAnimation)}
+                ref={(el) => { this.socialLinks = el; }}
+              >
                 <ul style={styles.socialLinksList}>
                   <SocialLink
                     url="https://github.com/yayromina"

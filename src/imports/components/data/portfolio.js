@@ -19,5 +19,4 @@ export default {
     url: 'http://reachify.io',
     description: 'Reachify is an omnichannel business communication tool to help businesses connect with customers and collaborate with their team. I built their website with a robust backend, enabling them to update their content and media easily, as well as have a custom-built CRM backend solution.',
   },
-
 };
