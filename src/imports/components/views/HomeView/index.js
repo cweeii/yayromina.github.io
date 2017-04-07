@@ -1,11 +1,10 @@
 import React, {PropTypes} from 'react';
 
-import EasyTransition from 'react-easy-transition'
+import EasyTransition from 'react-easy-transition';
 import Logo from 'babel!svg-react!../../../../../static/images/branding/logo.svg?name=Logo'; //eslint-disable-line
 import Navigation from '../../navigation';
 import SocialLink from '../../general/socialLinks';
 import anime from 'animejs';
-import { hashHistory } from 'react-router';
 import styles from './styles';
 
 export default class HomeView extends React.Component {
@@ -20,7 +19,7 @@ export default class HomeView extends React.Component {
   }
 
   introAnimations = () => {
-    if(!this.props.seenAnimation){
+    if (!this.props.seenAnimation) {
       // circle animation
       anime({
         easing: 'easeInCubic',
@@ -45,7 +44,7 @@ export default class HomeView extends React.Component {
           delay: 1650,
           duration: 900,
         },
-        begin: function(anim) {
+        begin: () => {
           anime({
             delay: window.chrome ? 1180 : 800,
             targets: '.title span',
