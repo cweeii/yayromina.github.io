@@ -46,6 +46,18 @@ export default class HomeView extends React.Component {
           delay: 1650,
           duration: 900,
         },
+        begin: function(anim) {
+          anime({
+            delay: window.chrome ? 1180 : 800,
+            targets: '.title span',
+            translateY: '-85px',
+            scaleY: 1,
+            opacity: 1,
+            duration: function(el, i, l) {
+              return 1050 + (i * 30);
+            },
+          });
+        },
       });
 
       // tagline animation
@@ -92,18 +104,6 @@ export default class HomeView extends React.Component {
         },
         loop: 6,
         targets: this.logo,
-        begin: function(anim) {
-          anime({
-            delay: 1750,
-            targets: '.title span',
-            translateY: '-85px',
-            scaleY: 1,
-            opacity: 1,
-            duration: function(el, i, l) {
-              return 1050 + (i * 30);
-            },
-          });
-        },
       });
     }
   }
