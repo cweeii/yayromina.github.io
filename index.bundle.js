@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4eaa888c36631a81fd69"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1cc0a717e8a96781256b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29919,7 +29919,7 @@
 /* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -30075,6 +30075,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
+	        console.log('does this timing work');
 	        this.introAnimations();
 	      }
 
@@ -30312,6 +30313,7 @@
 	}();
 
 	;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 580 */

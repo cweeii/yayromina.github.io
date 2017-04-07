@@ -16,6 +16,7 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
+    console.log('does this timing work');
     this.introAnimations();
   }
 
