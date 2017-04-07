@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1cc0a717e8a96781256b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5364b9234ec1eaebae66"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30007,21 +30007,7 @@
 	            duration: 900
 	          }
 	        });
-	        // text animation
-	        (0, _animejs2['default'])({
-	          delay: 2760,
-	          targets: '.title span',
-	          translateY: '-85px',
-	          scaleY: 1,
-	          opacity: 1,
-	          duration: function () {
-	            function duration(el, i, l) {
-	              return 1050 + i * 30;
-	            }
 
-	            return duration;
-	          }()
-	        });
 	        // tagline animation
 	        (0, _animejs2['default'])({
 	          delay: 3250,
@@ -30065,7 +30051,27 @@
 	            delay: 268
 	          },
 	          loop: 6,
-	          targets: _this.logo
+	          targets: _this.logo,
+	          begin: function () {
+	            function begin(anim) {
+	              (0, _animejs2['default'])({
+	                delay: 1750,
+	                targets: '.title span',
+	                translateY: '-85px',
+	                scaleY: 1,
+	                opacity: 1,
+	                duration: function () {
+	                  function duration(el, i, l) {
+	                    return 1050 + i * 30;
+	                  }
+
+	                  return duration;
+	                }()
+	              });
+	            }
+
+	            return begin;
+	          }()
 	        });
 	      }
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -30075,7 +30081,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
-	        console.log('does this timing work');
+	        console.log('callback 1750');
 	        this.introAnimations();
 	      }
 

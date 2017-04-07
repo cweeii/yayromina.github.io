@@ -16,7 +16,7 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
-    console.log('does this timing work');
+    console.log('callback 1750');
     this.introAnimations();
   }
 
@@ -47,17 +47,7 @@ export default class HomeView extends React.Component {
           duration: 900,
         },
       });
-      // text animation
-      anime({
-        delay: 2760,
-        targets: '.title span',
-        translateY: '-85px',
-        scaleY: 1,
-        opacity: 1,
-        duration: function(el, i, l) {
-          return 1050 + (i * 30);
-        },
-      });
+
       // tagline animation
       anime({
         delay: 3250,
@@ -102,6 +92,18 @@ export default class HomeView extends React.Component {
         },
         loop: 6,
         targets: this.logo,
+        begin: function(anim) {
+          anime({
+            delay: 1750,
+            targets: '.title span',
+            translateY: '-85px',
+            scaleY: 1,
+            opacity: 1,
+            duration: function(el, i, l) {
+              return 1050 + (i * 30);
+            },
+          });
+        },
       });
     }
   }
