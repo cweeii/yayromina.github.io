@@ -21,7 +21,7 @@ export default class WorkView extends React.Component {
         <EasyTransition
           path={location.pathname} //eslint-disable-line
           initialStyle={{opacity: 0}}
-          transition="opacity 0.3s ease-in"
+          transition="all 0.3s ease-in"
           finalStyle={{opacity: 1}}
         >
           <div style={styles.base}>

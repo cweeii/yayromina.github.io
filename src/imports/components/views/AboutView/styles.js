@@ -21,7 +21,10 @@ export default {
     textAlign: 'center',
     width: '100%',
     '@media screen and (max-width: 64em)': {
+      fontSize: '1.2rem',
+      padding: 0,
       maxWidth: '90%',
+      width: '100%',
     },
   },
   innerType: {

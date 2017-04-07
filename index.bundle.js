@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0e849a65fa93d292272a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "78ca13fa5eff62007791"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -33933,7 +33933,10 @@
 	    textAlign: 'center',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      maxWidth: '90%'
+	      fontSize: '1.2rem',
+	      padding: 0,
+	      maxWidth: '90%',
+	      width: '100%'
 	    }
 	  },
 	  innerType: {
@@ -54047,7 +54050,7 @@
 	            {
 	              path: location.pathname //eslint-disable-line
 	              , initialStyle: { opacity: 0 },
-	              transition: 'opacity 0.3s ease-in',
+	              transition: 'all 0.3s ease-in',
 	              finalStyle: { opacity: 1 }
 	            },
 	            _react2['default'].createElement(
