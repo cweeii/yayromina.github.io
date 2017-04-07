@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "95b38216c9b51e3a94e4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "766879d4a0b5b5a36116"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -54318,7 +54318,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
-	        _imagePreloader2['default'].simplePreload('http://romina.io/static/images/portfolio/campforall.png', 'http://romina.io/static/images/portfolio/emota.png', 'http://romina.io/static/images/portfolio/invision.png', 'http://romina.io/static/images/portfolio/reachify.png');
+	        _imagePreloader2['default'].simplePreload('https://romina.io/static/images/portfolio/campforall.png', 'https://romina.io/static/images/portfolio/emota.png', 'https://romina.io/static/images/portfolio/invision.png', 'https://romina.io/static/images/portfolio/reachify.png');
 	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! You can check out the full repo for this website at https://github.com/yayromina/yayromina.github.io ' + _nodeEmoji2['default'].get('star') + ' ' + _nodeEmoji2['default'].get('sparkles') + ' Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
 	      }
 
