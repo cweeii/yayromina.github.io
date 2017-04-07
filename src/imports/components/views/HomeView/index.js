@@ -16,7 +16,6 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
-    console.log('giving chrome an extra second');
     this.introAnimations();
   }
 
@@ -154,14 +153,14 @@ export default class HomeView extends React.Component {
               <div style={styles.socialLinks(this.props.seenAnimation)} ref={(el) => { this.socialLinks= el; }}>
                 <ul style={styles.socialLinksList}>
                   <SocialLink
-                    url="https://www.linkedin.com/in/rominabarrett/"
-                    icon="linkedin-square"
-                    title="LinkedIn"
-                  />
-                  <SocialLink
                     url="https://github.com/yayromina"
                     icon="github"
                     title="Github"
+                  />
+                  <SocialLink
+                    url="https://www.linkedin.com/in/rominabarrett/"
+                    icon="linkedin-square"
+                    title="LinkedIn"
                   />
                   <SocialLink
                     url="https://twitter.com/yayromina"

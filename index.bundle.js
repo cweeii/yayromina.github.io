@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f6a4a6c759864e6d09b0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "66c60c4ccfd184da2d22"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29919,7 +29919,7 @@
 /* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -30081,7 +30081,6 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
-	        console.log('giving chrome an extra second');
 	        this.introAnimations();
 	      }
 
@@ -30266,14 +30265,14 @@
 	                    'ul',
 	                    { style: _styles2['default'].socialLinksList },
 	                    _react2['default'].createElement(_socialLinks2['default'], {
-	                      url: 'https://www.linkedin.com/in/rominabarrett/',
-	                      icon: 'linkedin-square',
-	                      title: 'LinkedIn'
-	                    }),
-	                    _react2['default'].createElement(_socialLinks2['default'], {
 	                      url: 'https://github.com/yayromina',
 	                      icon: 'github',
 	                      title: 'Github'
+	                    }),
+	                    _react2['default'].createElement(_socialLinks2['default'], {
+	                      url: 'https://www.linkedin.com/in/rominabarrett/',
+	                      icon: 'linkedin-square',
+	                      title: 'LinkedIn'
 	                    }),
 	                    _react2['default'].createElement(_socialLinks2['default'], {
 	                      url: 'https://twitter.com/yayromina',
@@ -30319,7 +30318,6 @@
 	}();
 
 	;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 580 */
@@ -49253,6 +49251,7 @@
 	    function socialIcon(hover) {
 	      return {
 	        color: hover ? '#571B3C' : '#9D2053',
+	        cursor: 'pointer',
 	        display: 'block',
 	        transition: 'all 0.2s'
 	      };
