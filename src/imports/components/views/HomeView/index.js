@@ -148,7 +148,7 @@ export default class HomeView extends React.Component {
                 <h2 ref={(el) => { this.tagline = el; }} style={styles.tagline(this.props.seenAnimation)}>Senior Web Engineer</h2>
               </div>
               <div style={styles.navLinks(this.props.seenAnimation)} ref={(el) => { this.navLinks= el; }}>
-
+                <Navigation />
               </div>
               <div style={styles.socialLinks(this.props.seenAnimation)} ref={(el) => { this.socialLinks= el; }}>
                 <ul style={styles.socialLinksList}>
