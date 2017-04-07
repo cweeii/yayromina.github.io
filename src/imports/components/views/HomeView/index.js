@@ -48,7 +48,7 @@ export default class HomeView extends React.Component {
       });
       // text animation
       anime({
-        delay: 2820,
+        delay: 2760,
         targets: '.title span',
         translateY: '-85px',
         scaleY: 1,
