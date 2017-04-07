@@ -28,7 +28,7 @@ export default class HomeView extends React.Component {
         duration: 150,
         scaleX: 0,
         scaleY: 0,
-        delay: 150,
+        delay: 1580,
         targets: this.circle,
       });
       // flower animation
@@ -48,7 +48,7 @@ export default class HomeView extends React.Component {
       });
       // text animation
       anime({
-        delay: 2720,
+        delay: 2820,
         targets: '.title span',
         translateY: '-85px',
         scaleY: 1,

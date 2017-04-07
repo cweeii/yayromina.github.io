@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a5e6fbf797ff9f79ea19"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5eedc8aeedef19953648"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29989,7 +29989,7 @@
 	          duration: 150,
 	          scaleX: 0,
 	          scaleY: 0,
-	          delay: 150,
+	          delay: 1580,
 	          targets: _this.circle
 	        });
 	        // flower animation
@@ -30009,7 +30009,7 @@
 	        });
 	        // text animation
 	        (0, _animejs2['default'])({
-	          delay: 2720,
+	          delay: 2820,
 	          targets: '.title span',
 	          translateY: '-85px',
 	          scaleY: 1,
