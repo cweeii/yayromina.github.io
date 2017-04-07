@@ -8,16 +8,6 @@ import styles from './styles';
 @radium
 export default class WorkView extends React.Component {
 
-   componentDidMount() {
-     console.log(portfolio);
-   }
-
-  mapObject = (object, callback) => {
-    return Object.keys(object).map(function (key) {
-      return callback(key, object[key]);
-    });
-  }
-
   render() {
     return (
       <div>
