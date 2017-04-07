@@ -1,14 +1,15 @@
 export default {
   base: hover => ({
-    border: hover ? '1px solid rgba(0,0,0,0.2)' : 'none',
-    boxShadow: hover ? 'inset 0 0 10px rgba(0, 0, 0, .2), 0 0 10px rgba(0, 0, 0, .1)' : 'inset 0 0 20px rgba(0, 0, 0, 0)',
+    background: '#FFF',
+    border: hover ? '1px solid rgba(157, 32, 83,0.2)' : 'none',
+    boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
     cursor: 'pointer',
     display: 'block',
     height: 45,
     lineHeight: '45px',
     maxWidth: 160,
     outline: '0',
-    outlineColor: hover ? 'rgba(0, 0, 0, 0)' : 'rgba(0, 0, 0, .2)',
+    outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
     outlineOffset: hover ? 15 : 0,
     outlineStyle: 'solid',
     outlineWidth: 1,
@@ -22,5 +23,12 @@ export default {
   }),
   buttonWrapper: {
     width: '30%',
+    '@media screen and (max-width: 64em)': {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'column',
+    },
   },
 };

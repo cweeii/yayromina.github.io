@@ -1,8 +1,10 @@
 import Button from '../general/button';
 import React from 'react';
 import { hashHistory } from 'react-router';
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class Navigation extends React.Component {
   render() {
     return (

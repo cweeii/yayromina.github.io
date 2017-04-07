@@ -8,6 +8,10 @@ import styles from './styles';
 @radium
 export default class ContactView extends React.Component {
 
+  state = {
+    hover: false,
+  }
+
   componentDidMount() {
     this.nameInput.focus();
   }
@@ -27,7 +31,20 @@ export default class ContactView extends React.Component {
               <input style={styles.input} key="name" type="text" name="name" placeholder="Name" required ref={(input) => { this.nameInput = input; }} />
               <input style={styles.input} key="email" type="email" name="email" placeholder="Email Address" required />
               <textarea style={styles.input} key="message" name="message" rows="4" placeholder="Message" />
-              <button type="submit">Send</button>
+              <button
+                style={styles.submit(this.state.hover)}
+                type="submit"
+                onMouseEnter={() =>
+                  this.setState({
+                    hover: true,
+                  })
+                }
+                onMouseLeave={() =>
+                  this.setState({
+                    hover: false,
+                  })
+                }
+              >Send</button>
             </form>
             <div
               style={styles.socialLinks(true)}

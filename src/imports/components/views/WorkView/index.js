@@ -8,6 +8,13 @@ import styles from './styles';
 @radium
 export default class WorkView extends React.Component {
 
+  state = {
+    emotaHover: false,
+    reachHover: false,
+    campHover: false,
+    hover: false,
+  }
+
   render() {
     return (
       <div>
@@ -64,6 +71,17 @@ export default class WorkView extends React.Component {
                       href="http://campforall.org/"
                       target="_blank"
                       rel="noreferrer noopener"
+                      style={styles.button(this.state.campHover)}
+                      onMouseEnter={() =>
+                        this.setState({
+                          campHover: true,
+                        })
+                      }
+                      onMouseLeave={() =>
+                        this.setState({
+                          campHover: false,
+                        })
+                      }
                     >
                       Visit Camp For All
                     </a>
@@ -103,6 +121,17 @@ export default class WorkView extends React.Component {
                       href="http://emota.com"
                       target="_blank"
                       rel="noreferrer noopener"
+                      style={styles.button(this.state.emotaHover)}
+                      onMouseEnter={() =>
+                        this.setState({
+                          emotaHover: true,
+                        })
+                      }
+                      onMouseLeave={() =>
+                        this.setState({
+                          emotaHover: false,
+                        })
+                      }
                     >
                       Visit Emota
                     </a>
@@ -142,6 +171,17 @@ export default class WorkView extends React.Component {
                       href="http://invisionstudio.com/"
                       target="_blank"
                       rel="noreferrer noopener"
+                      style={styles.button(this.state.hover)}
+                      onMouseEnter={() =>
+                        this.setState({
+                          hover: true,
+                        })
+                      }
+                      onMouseLeave={() =>
+                        this.setState({
+                          hover: false,
+                        })
+                      }
                     >
                       Visit Invision Studio
                     </a>
@@ -181,6 +221,17 @@ export default class WorkView extends React.Component {
                       href="http://reachify.io"
                       target="_blank"
                       rel="noreferrer noopener"
+                      style={styles.button(this.state.reachHover)}
+                      onMouseEnter={() =>
+                        this.setState({
+                          reachHover: true,
+                        })
+                      }
+                      onMouseLeave={() =>
+                        this.setState({
+                          reachHover: false,
+                        })
+                      }
                     >
                       Visit Reachify
                     </a>

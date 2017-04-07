@@ -1,8 +1,10 @@
 import React, { PropTypes } from 'react';
 
 import { hashHistory } from 'react-router';
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class Button extends React.Component {
 
   static propTypes = {

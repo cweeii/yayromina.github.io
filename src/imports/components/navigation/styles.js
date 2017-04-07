@@ -24,5 +24,8 @@ export default {
     maxWidth: 640,
     margin: 'auto auto 30px',
     width: '100%',
+    '@media screen and (max-width: 64em)': {
+      flexDirection: 'column',
+    },
   },
 };
