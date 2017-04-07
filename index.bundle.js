@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5364b9234ec1eaebae66"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f6a4a6c759864e6d09b0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30005,7 +30005,27 @@
 	            value: 135,
 	            delay: 1650,
 	            duration: 900
-	          }
+	          },
+	          begin: function () {
+	            function begin(anim) {
+	              (0, _animejs2['default'])({
+	                delay: window.chrome ? 1180 : 800,
+	                targets: '.title span',
+	                translateY: '-85px',
+	                scaleY: 1,
+	                opacity: 1,
+	                duration: function () {
+	                  function duration(el, i, l) {
+	                    return 1050 + i * 30;
+	                  }
+
+	                  return duration;
+	                }()
+	              });
+	            }
+
+	            return begin;
+	          }()
 	        });
 
 	        // tagline animation
@@ -30051,27 +30071,7 @@
 	            delay: 268
 	          },
 	          loop: 6,
-	          targets: _this.logo,
-	          begin: function () {
-	            function begin(anim) {
-	              (0, _animejs2['default'])({
-	                delay: 1750,
-	                targets: '.title span',
-	                translateY: '-85px',
-	                scaleY: 1,
-	                opacity: 1,
-	                duration: function () {
-	                  function duration(el, i, l) {
-	                    return 1050 + i * 30;
-	                  }
-
-	                  return duration;
-	                }()
-	              });
-	            }
-
-	            return begin;
-	          }()
+	          targets: _this.logo
 	        });
 	      }
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -30081,7 +30081,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
-	        console.log('callback 1750');
+	        console.log('giving chrome an extra second');
 	        this.introAnimations();
 	      }
 

@@ -16,7 +16,7 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
-    console.log('callback 1750');
+    console.log('giving chrome an extra second');
     this.introAnimations();
   }
 
