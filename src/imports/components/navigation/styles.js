@@ -1,0 +1,28 @@
+export default {
+  base: {
+    border: '1px solid #000',
+    cursor: 'pointer',
+    lineHeight: '45px',
+    height: 45,
+    display: 'block',
+    maxWidth: 160,
+    position: 'relative',
+    textDecoration: 'none',
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    verticalAlign: 'middle',
+    width: '32.5%',
+    margin: '1%',
+    outline: '0',
+    zIndex: '2',
+  },
+  navigationWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    maxWidth: 640,
+    margin: 'auto auto 30px',
+    width: '100%',
+  },
+};

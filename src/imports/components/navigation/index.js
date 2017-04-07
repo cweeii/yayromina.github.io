@@ -1,13 +1,27 @@
+import Button from '../general/button';
 import React from 'react';
 import { hashHistory } from 'react-router';
+import styles from './styles';
 
 export default class Navigation extends React.Component {
   render() {
     return (
-      <div>
-        <button onClick={() => hashHistory.push('/about')}>About</button>
-        <button onClick={() => hashHistory.push('/work')}>Work</button>
-        <button onClick={() => hashHistory.push('/Contact')}>Contact</button>
+      <div style={styles.navigationWrapper}>
+        <Button
+          label="About"
+          path="/about"
+          target="_self"
+        />
+        <Button
+          label="Work"
+          path="/work"
+          target="_self"
+        />
+        <Button
+          label="Contact"
+          path="/contact"
+          target="_self"
+        />
       </div>
     );
   }

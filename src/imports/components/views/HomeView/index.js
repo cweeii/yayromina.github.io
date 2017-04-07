@@ -15,7 +15,6 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
-    console.log('preloading images');
     this.introAnimations();
   }
 
@@ -65,15 +64,15 @@ export default class HomeView extends React.Component {
         duration: 800,
         targets: this.tagline,
         opacity: 1,
-        translateY: 20,
+        translateY: 30,
       });
-      // social link animation
+      // nav link animation
       anime({
         delay: 3750,
         duration: 800,
         targets: this.navLinks,
         opacity: 1,
-        translateY: 20,
+        translateY: 40,
         complete: this.props.seenAnimationToggle,
       });
       // social link animation
@@ -82,7 +81,7 @@ export default class HomeView extends React.Component {
         duration: 1000,
         targets: this.socialLinks,
         opacity: 1,
-        translateY: 20,
+        translateY: 80,
         complete: this.props.seenAnimationToggle,
       });
       // logo animation

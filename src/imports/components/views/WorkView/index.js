@@ -98,7 +98,7 @@ export default class WorkView extends React.Component {
                         alt="Emota Logo"
                       />
                     </a>
-                    <p>Emota is a web agency located in San Diego dedicated to helping brands imagine and create award-winning video content that transforms customers into fans. I built three custom video players that are in use throughout the site and is powered by Angular on top of a Wordpress-powered API.</p>
+                    <p>Emota is an Emmy Award winning video agency dedicated to helping brands imagine and create award-winning video content that transforms customers into fans. I built three custom video players that are in use throughout the site, which is powered by Angular on top of a Wordpress API.</p>
                     <a
                       href="http://emota.com"
                       target="_blank"

@@ -36,7 +36,7 @@ export default {
   }),
   tagline: seen => ({
     opacity: seen ? '1' : '0',
-    transform: seen ? 'translateY(20px)' : 'none',
+    transform: seen ? 'translateY(30px)' : 'none',
     marginTop: '-100px',
   }),
   span: seen => ({
@@ -59,13 +59,16 @@ export default {
     fontSize: '2.5rem',
   },
   socialLinks: seen => ({
-    marginTop: '3rem',
     opacity: seen ? '1' : '0',
-    transform: seen ? 'translateY(20px)' : 'none',
+    transform: seen ? 'translateY(80px)' : 'none',
+    position: 'relative',
+    zIndex: '9',
   }),
   navLinks: seen => ({
     opacity: seen ? '1' : 0,
-    transform: seen ? 'translateY(20px)' : 'none',
+    marginTop: '2rem',
+    transform: seen ? 'translateY(40px)' : 'none',
+    width: '100%',
   }),
   socialLinksList: {
     textAlign: 'center',
@@ -81,5 +84,6 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
     transition: 'all 0.5s',
+    width: '100%',
   },
 };

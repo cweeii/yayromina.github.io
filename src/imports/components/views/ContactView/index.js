@@ -1,8 +1,16 @@
+import React, { PropTypes } from 'react';
+
 import EasyTransition from 'react-easy-transition';
-import React from 'react';
+import SocialLink from '../../general/socialLinks';
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class ContactView extends React.Component {
+
+  componentDidMount() {
+    this.nameInput.focus();
+  }
   render() {
     return (
       <div>
@@ -13,15 +21,41 @@ export default class ContactView extends React.Component {
           finalStyle={{opacity: 1}}
         >
           <div style={styles.base}>
-            <h1>Contact</h1>
-            <h2>Cool!</h2>
-            <p>I'm excited to hear about what you have cookin' and how I may help!</p>
+            <h1 style={styles.headline}>Thanks for your interest!</h1>
+            <h2 style={styles.tagline}>I'm excited to hear about what you have cookin and how I may help. Send me a message and I'll get back to you soon!</h2>
             <form method="POST" action="https://formspree.io/hi@romina.io">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email Address" />
-              <textarea name="message" rows="4" />
+              <input style={styles.input} key="name" type="text" name="name" placeholder="Name" required ref={(input) => { this.nameInput = input; }} />
+              <input style={styles.input} key="email" type="email" name="email" placeholder="Email Address" required />
+              <textarea style={styles.input} key="message" name="message" rows="4" placeholder="Message" />
               <button type="submit">Send</button>
             </form>
+            <div
+              style={styles.socialLinks(true)}
+              ref={(el) => { this.socialLinks = el; }}
+            >
+              <ul style={styles.socialLinksList}>
+                <SocialLink
+                  url="https://github.com/yayromina"
+                  icon="github"
+                  title="Github"
+                />
+                <SocialLink
+                  url="https://www.linkedin.com/in/rominabarrett/"
+                  icon="linkedin-square"
+                  title="LinkedIn"
+                />
+                <SocialLink
+                  url="https://twitter.com/yayromina"
+                  icon="twitter"
+                  title="Twitter"
+                />
+                <SocialLink
+                  url="https://open.spotify.com/user/yayromina"
+                  icon="spotify"
+                  title="Spotify"
+                />
+              </ul>
+            </div>
           </div>
         </EasyTransition>
       </div>

@@ -83,7 +83,7 @@ export default {
   }),
   projectDescriptionWrapper: order => ({
     fontSize: '1.4rem',
-    lineHeight: '1.8rem',
+    lineHeight: '2rem',
     textAlign: 'center',
     padding: '0.8rem',
     order: order === 'odd' ? '2' : '1',
