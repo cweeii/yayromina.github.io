@@ -17,7 +17,7 @@ export default {
     fontSize: '1.4rem',
     padding: '1rem',
     lineHeight: '2rem',
-    maxWidth: '60rem',
+    maxWidth: '50rem',
     textAlign: 'center',
     width: '100%',
     '@media screen and (max-width: 64em)': {
@@ -26,11 +26,10 @@ export default {
   },
   innerType: {
     fontSize: '1.4rem',
-    maxWidth: '60rem',
     padding: '1rem',
     lineHeight: '2rem',
     textAlign: 'center',
-    width: '50%',
+    width: '50rem',
     '@media screen and (max-width: 64em)': {
       fontSize: '1.2rem',
       padding: 0,
@@ -52,10 +51,9 @@ export default {
   },
   headline: {
     fontSize: '1.8rem',
-    lineHeight: '2.2rem',
+    lineHeight: '2.3rem',
     textAlign: 'center',
-    maxWidth: '46rem',
-    width: '50%',
+    width: '46rem',
     '@media screen and (max-width: 64em)': {
       fontSize: '1.4rem',
       lineHeight: '1.8rem',

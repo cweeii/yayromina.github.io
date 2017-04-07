@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import emoji from 'node-emoji';
+import styles from './styles';
 
 export default class MainLayout extends React.Component {
 
@@ -26,7 +27,7 @@ export default class MainLayout extends React.Component {
     })
    );
     return (
-      <div>
+      <div style={styles.base}>
         {childrenWithProps}
       </div>
     );
