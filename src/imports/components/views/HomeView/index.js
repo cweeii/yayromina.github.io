@@ -15,6 +15,7 @@ export default class HomeView extends React.Component {
   }
 
   componentDidMount() {
+    console.log('preloading images');
     this.introAnimations();
   }
 

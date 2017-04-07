@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9599a608bcd54e6fefcf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "95b38216c9b51e3a94e4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17732,7 +17732,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGa = __webpack_require__(847);
+	var _reactGa = __webpack_require__(850);
 
 	var _reactGa2 = _interopRequireDefault(_reactGa);
 
@@ -34117,7 +34117,7 @@
 /* 643 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -34281,6 +34281,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
+	        console.log('preloading images');
 	        this.introAnimations();
 	      }
 
@@ -34521,6 +34522,7 @@
 	  seenAnimationToggle: _react.PropTypes.func
 	}, _temp2);
 	exports['default'] = HomeView;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
 /* 644 */
@@ -54226,7 +54228,7 @@
 
 	var _radium = __webpack_require__(576);
 
-	var _styles = __webpack_require__(846);
+	var _styles = __webpack_require__(849);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -54271,11 +54273,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _nodeEmoji = __webpack_require__(841);
+	var _imagePreloader = __webpack_require__(841);
+
+	var _imagePreloader2 = _interopRequireDefault(_imagePreloader);
+
+	var _nodeEmoji = __webpack_require__(844);
 
 	var _nodeEmoji2 = _interopRequireDefault(_nodeEmoji);
 
-	var _styles = __webpack_require__(845);
+	var _styles = __webpack_require__(848);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -54312,6 +54318,7 @@
 	    key: 'componentDidMount',
 	    value: function () {
 	      function componentDidMount() {
+	        _imagePreloader2['default'].simplePreload('http://romina.io/static/images/portfolio/campforall.png', 'http://romina.io/static/images/portfolio/emota.png', 'http://romina.io/static/images/portfolio/invision.png', 'http://romina.io/static/images/portfolio/reachify.png');
 	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! You can check out the full repo for this website at https://github.com/yayromina/yayromina.github.io ' + _nodeEmoji2['default'].get('star') + ' ' + _nodeEmoji2['default'].get('sparkles') + ' Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
 	      }
 
@@ -54350,14 +54357,186 @@
 /* 841 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @licence MIT
+	 * @author Sergey Melyukov
+	 */
+
 	module.exports = __webpack_require__(842);
+
 
 /***/ },
 /* 842 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @licence MIT
+	 * @author Sergey Melyukov
+	 */
+
+	var allSettled = __webpack_require__(843);
+
+	/**
+	 * Image preloader
+	 *
+	 * @class ImagePreloader
+	 * @constructor
+	 *
+	 * @param {(String|HTMLImageElement)=} fallbackImage
+	 * @param {function({status:boolean, value:HTMLImageElement})=} onProgress
+	 */
+	var ImagePreloader = function(fallbackImage, onProgress) {
+	    /**
+	     * @type {?function({status: boolean, value: HTMLImageElement})}
+	     */
+	    this.onProgress = typeof onProgress === 'function' ? onProgress : null;
+	    /**
+	     * @type {?String|HTMLImageElement}
+	     */
+	    this.fallbackImage = typeof fallbackImage === 'string' || fallbackImage instanceof HTMLImageElement ? fallbackImage : null;
+	};
+
+	/**
+	 * Do simple image preloading.
+	 *
+	 * @param {!(String|HTMLImageElement)} imageSource
+	 *
+	 * @return {Promise} will be resolved/rejected with HTMLImageElement
+	 */
+	ImagePreloader.simplePreload = function(imageSource) {
+	    return new Promise(function(resolve, reject) {
+	        var img;
+
+	        if (imageSource instanceof HTMLImageElement) {
+	            img = imageSource;
+
+	            if (!img.complete) {
+	                img.onload = resolve.bind(null, img);
+	                img.onerror = img.onabort = reject.bind(null, img);
+	            } else if (img.naturalHeight) {
+	                resolve(img);
+	            } else {
+	                reject(img);
+	            }
+	        } else if (typeof imageSource === 'string') {
+	            img = new Image();
+	            img.onload = resolve.bind(null, img);
+	            img.onerror = img.onabort = reject.bind(null, img);
+	            img.src = imageSource;
+	        }
+	    });
+	};
+
+	/**
+	 * Preload image.
+	 *
+	 * If fallbackImage-property is defined and correct, then src-attribute for the broken images will replaced by fallbackImage
+	 * As well, origin image url will be placed to 'data-fail-src' attribute.
+	 *
+	 * If onProgress-method is defined, then this method will be calling for every image loading (fulfilled of rejected).
+	 *
+	 * @param {...(String|HTMLImageElement|Array<String|HTMLImageElement>)} args
+	 *
+	 * @return {Promise} will be resolved with Array<{status:boolean, value:HTMLImageElement}>
+	 *
+	 *     status-property - is the status of image loading
+	 *     status-property will be true if:
+	 *      - original image loading is ok
+	 *      - or original image loading is fail but fallback-image loading is ok
+	 *     status-property will be false if:
+	 *      - original image loading is fail
+	 *      - or original image loading is fail and fallback-image loading is fail
+	 *
+	 *     value-property - is the image that was loaded
+	 */
+	ImagePreloader.prototype.preload = function(args) {
+	    var that = this,
+	        imagesToLoad = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
+
+	    imagesToLoad = imagesToLoad.map(function(imageSource) {
+	        return ImagePreloader.simplePreload(imageSource).catch(function(brokenImage) {
+	            if (that.fallbackImage) {
+	                return ImagePreloader.simplePreload(that.fallbackImage)
+	                    .then(function(fallbackImage) {
+	                        brokenImage.setAttribute('data-fail-src', brokenImage.src);
+	                        brokenImage.src = fallbackImage.src;
+
+	                        return brokenImage;
+	                    }, function() {
+	                        return Promise.reject(brokenImage);
+	                    });
+	            }
+
+	            return Promise.reject(brokenImage);
+	        });
+	    });
+
+	    return allSettled(imagesToLoad, that.onProgress);
+	};
+
+	module.exports = ImagePreloader;
+
+
+/***/ },
+/* 843 */
+/***/ function(module, exports) {
+
+	/**
+	 * @licence
+	 * @author Sergey Melyukov 2016
+	 */
+
+	/**
+	 * Waiting while all promises will be settled to onFulfilled or onRejected state
+	 * Returned promise will be resolved with array with info for every passed promise:
+	 * Array<{status:boolean, value:*}>
+	 *
+	 * onProgress-function will be called (if passed) for every settled promise
+	 *
+	 * @param {Array<Promise>} promises
+	 * @param {function({status:boolean, value:*})=} onProgress
+	 *
+	 * @return {Promise}
+	 */
+	function allSettled(promises, onProgress) {
+	    var mapped = promises.map(function(promise) {
+	        return promise.then(function(value) {
+	            return {
+	                value: value,
+	                status: true
+	            };
+	        }, function(e) {
+	            return {
+	                value: e,
+	                status: false
+	            };
+	        }).then(function(value) {
+	            if (typeof onProgress === 'function') {
+	                onProgress(value);
+	            }
+
+	            return value;
+	        });
+	    });
+
+	    return Promise.all(mapped);
+	}
+
+	module.exports = allSettled;
+
+
+/***/ },
+/* 844 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(845);
+
+/***/ },
+/* 845 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/*jslint node: true*/
-	__webpack_require__(843);
+	__webpack_require__(846);
 
 	"use strict";
 
@@ -54390,7 +54569,7 @@
 	 * Emoji namespace
 	 */
 	var Emoji = module.exports = {
-	  emoji: __webpack_require__(844)
+	  emoji: __webpack_require__(847)
 	};
 
 	/**
@@ -54487,7 +54666,7 @@
 
 
 /***/ },
-/* 843 */
+/* 846 */
 /***/ function(module, exports) {
 
 	/*! http://mths.be/codepointat v0.2.0 by @mathias */
@@ -54547,7 +54726,7 @@
 
 
 /***/ },
-/* 844 */
+/* 847 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -55895,7 +56074,7 @@
 	};
 
 /***/ },
-/* 845 */
+/* 848 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55912,7 +56091,7 @@
 	};
 
 /***/ },
-/* 846 */
+/* 849 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55930,7 +56109,7 @@
 	};
 
 /***/ },
-/* 847 */
+/* 850 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -55944,12 +56123,12 @@
 	/**
 	 * Utilities
 	 */
-	var format = __webpack_require__(848);
-	var removeLeadingSlash = __webpack_require__(853);
-	var trim = __webpack_require__(851);
+	var format = __webpack_require__(851);
+	var removeLeadingSlash = __webpack_require__(856);
+	var trim = __webpack_require__(854);
 
-	var warn = __webpack_require__(852);
-	var log = __webpack_require__(854);
+	var warn = __webpack_require__(855);
+	var log = __webpack_require__(857);
 
 	var _debug = false;
 	var _titleCase = true;
@@ -56422,7 +56601,7 @@
 	  }
 	};
 
-	var OutboundLink = __webpack_require__(855);
+	var OutboundLink = __webpack_require__(858);
 	OutboundLink.origTrackLink = OutboundLink.trackLink;
 	OutboundLink.trackLink = ReactGA.outboundLink.bind(ReactGA);
 	ReactGA.OutboundLink = OutboundLink;
@@ -56431,12 +56610,12 @@
 
 
 /***/ },
-/* 848 */
+/* 851 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mightBeEmail = __webpack_require__(849);
-	var toTitleCase = __webpack_require__(850);
-	var warn = __webpack_require__(852);
+	var mightBeEmail = __webpack_require__(852);
+	var toTitleCase = __webpack_require__(853);
+	var warn = __webpack_require__(855);
 
 	var _redacted = 'REDACTED (Potential Email Address)';
 
@@ -56457,7 +56636,7 @@
 
 
 /***/ },
-/* 849 */
+/* 852 */
 /***/ function(module, exports) {
 
 	// See if s could be an email address. We don't want to send personal data like email.
@@ -56471,7 +56650,7 @@
 
 
 /***/ },
-/* 850 */
+/* 853 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -56480,7 +56659,7 @@
 	 * https://github.com/gouch/to-title-case
 	 */
 
-	var trim = __webpack_require__(851);
+	var trim = __webpack_require__(854);
 
 	function toTitleCase(s) {
 	  var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
@@ -56508,7 +56687,7 @@
 
 
 /***/ },
-/* 851 */
+/* 854 */
 /***/ function(module, exports) {
 
 	// GA strings need to have leading/trailing whitespace trimmed, and not all
@@ -56522,7 +56701,7 @@
 
 
 /***/ },
-/* 852 */
+/* 855 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {function warn(s) {
@@ -56534,7 +56713,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
-/* 853 */
+/* 856 */
 /***/ function(module, exports) {
 
 	function removeLeadingSlash(s) {
@@ -56549,7 +56728,7 @@
 
 
 /***/ },
-/* 854 */
+/* 857 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {function log(s) {
@@ -56561,7 +56740,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(299)))
 
 /***/ },
-/* 855 */
+/* 858 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {var React = __webpack_require__(475);
