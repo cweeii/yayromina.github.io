@@ -239,8 +239,7 @@ export default class WorkView extends React.Component {
                   </div>
                 </div>
               </div>
-              <p style={styles.footerType}>These are just a few of the sites that I've worked on. Want to see more?
-                <a
+              <p style={styles.footerType}>These are just a few of the sites that I've worked on. Want to see more?  <a
                   onClick={() => { hashHistory.push('/contact')}}
                   >
                   Let's talk!

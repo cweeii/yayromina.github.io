@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "78ca13fa5eff62007791"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8bea1ffe8c3f7f137df7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17905,7 +17905,13 @@
 	              _react2['default'].createElement(
 	                'p',
 	                { style: _styles2['default'].footerType },
-	                'Looking for a resume? Download it here and feel free to check out my LinkedIn!'
+	                'Looking for a resume? Download it here and feel free to check out my ',
+	                _react2['default'].createElement(
+	                  'a',
+	                  { href: 'https://www.linkedin.com/in/rominabarrett/', target: '_blank' },
+	                  'LinkedIn'
+	                ),
+	                '!'
 	              )
 	            )
 	          )
@@ -34404,12 +34410,13 @@
 	    function submit(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.2)' : 'none',
+	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
+	        fontSize: hover ? '1.22rem' : '1.2rem',
 	        height: 45,
-	        lineHeight: '45px',
+	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: 160,
 	        outline: '0',
 	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
@@ -53723,12 +53730,13 @@
 	    function base(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.2)' : 'none',
+	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
+	        fontSize: hover ? '1.22rem' : '1.2rem',
 	        height: 45,
-	        lineHeight: '45px',
+	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: 160,
 	        outline: '0',
 	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
@@ -53993,6 +54001,8 @@
 	var _react = __webpack_require__(475);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(513);
 
 	var _portfolio = __webpack_require__(840);
 
@@ -54376,7 +54386,20 @@
 	                _react2['default'].createElement(
 	                  'p',
 	                  { style: _styles2['default'].footerType },
-	                  'These are just a few of the sites that I\'ve worked on. Want to see more? Let\'s talk!'
+	                  'These are just a few of the sites that I\'ve worked on. Want to see more?  ',
+	                  _react2['default'].createElement(
+	                    'a',
+	                    {
+	                      onClick: function () {
+	                        function onClick() {
+	                          _reactRouter.hashHistory.push('/contact');
+	                        }
+
+	                        return onClick;
+	                      }()
+	                    },
+	                    'Let\'s talk!'
+	                  )
 	                )
 	              )
 	            )
@@ -54566,12 +54589,13 @@
 	    function button(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.2)' : 'none',
+	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
+	        fontSize: hover ? '1.22rem' : '1.2rem',
 	        height: 45,
-	        lineHeight: '45px',
+	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: '90%',
 	        margin: '40px auto 0',
 	        outline: '0',
