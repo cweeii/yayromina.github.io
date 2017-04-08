@@ -1,11 +1,20 @@
+import React, { PropTypes } from 'react';
+
 import EasyTransition from 'react-easy-transition';
-import React from 'react';
 import { hashHistory } from 'react-router';
 import radium from 'radium';
 import styles from './styles';
 
 @radium
 export default class AboutView extends React.Component {
+
+  static propTypes = {
+    isHome: PropTypes.func,
+  }
+
+  componentWillMount() {
+    this.props.isHome(false);
+  }
 
   render() {
     return (

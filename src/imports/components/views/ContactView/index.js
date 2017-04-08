@@ -8,6 +8,14 @@ import styles from './styles';
 @radium
 export default class ContactView extends React.Component {
 
+  static propTypes = {
+    isHome: PropTypes.func,
+  }
+
+  componentWillMount() {
+    this.props.isHome(false);
+  }
+
   state = {
     hover: false,
   }

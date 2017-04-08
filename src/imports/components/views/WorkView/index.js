@@ -1,6 +1,7 @@
+import React, { PropTypes } from 'react';
+
 import EasyTransition from 'react-easy-transition';
 import Project from './Project';
-import React from 'react';
 import { hashHistory } from 'react-router';
 import portfolio from '../../data/portfolio';
 import radium from 'radium';
@@ -8,6 +9,14 @@ import styles from './styles';
 
 @radium
 export default class WorkView extends React.Component {
+
+  static propTypes = {
+    isHome: PropTypes.func,
+  }
+
+  componentWillMount() {
+    this.props.isHome(false);
+  }
 
   state = {
     emotaHover: false,

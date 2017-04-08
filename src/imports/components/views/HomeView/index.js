@@ -12,10 +12,12 @@ export default class HomeView extends React.Component {
   static propTypes = {
     seenAnimation: PropTypes.bool,
     seenAnimationToggle: PropTypes.func,
+    isHome: PropTypes.func,
   }
 
   componentDidMount() {
     this.introAnimations();
+    this.props.isHome(true);
   }
 
   introAnimations = () => {

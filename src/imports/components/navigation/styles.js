@@ -22,7 +22,7 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
     maxWidth: 640,
-    margin: 'auto auto 30px',
+    margin: 'auto',
     width: '100%',
     '@media screen and (max-width: 64em)': {
       flexDirection: 'column',
