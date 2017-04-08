@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ea7e8ddf42c8918b2e1e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b6e78095cb9268383cdd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -33950,7 +33950,6 @@
 	    textAlign: 'center',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      fontSize: '1.2rem',
 	      padding: 0,
 	      maxWidth: '90%',
 	      width: '100%'
@@ -33963,7 +33962,6 @@
 	    textAlign: 'center',
 	    width: '50rem',
 	    '@media screen and (max-width: 64em)': {
-	      fontSize: '1.2rem',
 	      padding: 0,
 	      maxWidth: '90%',
 	      width: '100%'
@@ -33987,7 +33985,7 @@
 	    textAlign: 'center',
 	    width: '46rem',
 	    '@media screen and (max-width: 64em)': {
-	      fontSize: '1.4rem',
+	      fontSize: '1.6rem',
 	      lineHeight: '1.8rem',
 	      maxWidth: '90%',
 	      width: '90%'
@@ -34077,15 +34075,6 @@
 	      }
 
 	      return componentWillMount;
-	    }()
-	  }, {
-	    key: 'componentDidMount',
-	    value: function () {
-	      function componentDidMount() {
-	        this.nameInput.focus();
-	      }
-
-	      return componentDidMount;
 	    }()
 	  }, {
 	    key: 'render',

@@ -19,10 +19,7 @@ export default class ContactView extends React.Component {
   state = {
     hover: false,
   }
-
-  componentDidMount() {
-    this.nameInput.focus();
-  }
+  
   render() {
     return (
       <div>

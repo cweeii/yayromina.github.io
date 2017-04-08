@@ -21,7 +21,6 @@ export default {
     textAlign: 'center',
     width: '100%',
     '@media screen and (max-width: 64em)': {
-      fontSize: '1.2rem',
       padding: 0,
       maxWidth: '90%',
       width: '100%',
@@ -34,7 +33,6 @@ export default {
     textAlign: 'center',
     width: '50rem',
     '@media screen and (max-width: 64em)': {
-      fontSize: '1.2rem',
       padding: 0,
       maxWidth: '90%',
       width: '100%',
@@ -58,7 +56,7 @@ export default {
     textAlign: 'center',
     width: '46rem',
     '@media screen and (max-width: 64em)': {
-      fontSize: '1.4rem',
+      fontSize: '1.6rem',
       lineHeight: '1.8rem',
       maxWidth: '90%',
       width: '90%',
