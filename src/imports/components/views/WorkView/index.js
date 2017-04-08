@@ -1,6 +1,7 @@
 import EasyTransition from 'react-easy-transition';
 import Project from './Project';
 import React from 'react';
+import { hashHistory } from 'react-router';
 import portfolio from '../../data/portfolio';
 import radium from 'radium';
 import styles from './styles';
@@ -238,7 +239,13 @@ export default class WorkView extends React.Component {
                   </div>
                 </div>
               </div>
-              <p style={styles.footerType}>These are just a few of the sites that I've worked on. Want to see more? Let's talk!</p>
+              <p style={styles.footerType}>These are just a few of the sites that I've worked on. Want to see more?
+                <a
+                  onClick={() => { hashHistory.push('/contact')}}
+                  >
+                  Let's talk!
+                </a>
+            </p>
             </div>
           </div>
         </EasyTransition>
