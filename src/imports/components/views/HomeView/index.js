@@ -161,7 +161,9 @@ export default class HomeView extends React.Component {
                 style={styles.navLinks(this.props.seenAnimation)}
                 ref={(el) => { this.navLinks = el; }}
               >
-                <Navigation />
+                <Navigation
+                  isHeader={false}
+                />
               </div>
               <div
                 style={styles.socialLinks(this.props.seenAnimation)}

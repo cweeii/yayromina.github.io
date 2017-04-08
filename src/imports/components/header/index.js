@@ -14,19 +14,37 @@ export default class Header extends React.Component {
     scroll: PropTypes.bool,
   }
 
+  state = {
+    hover: false,
+  }
+
   render() {
     return (
-      <div style={styles.header(this.props.isHome, this.props.scroll)}>
+      <div style={styles.header(this.props.isHome, this.props.scroll)} key="header">
         <div style={styles.base}>
-          <div style={styles.logoContainer}>
+          <div
+            style={styles.logoContainer(this.props.scroll)}
+            onMouseEnter={() =>
+             this.setState({
+               hover: true,
+             })
+           }
+            onMouseLeave={() =>
+             this.setState({
+               hover: false,
+             })
+           }
+          >
             <a
                 onClick={() => { hashHistory.push('/')}}
                 >
-              <span style={styles.logo}><Logo /></span> <span style={styles.name}>Romina Barrett</span>
+              <span style={styles.logo}><Logo /></span> <span style={styles.name(this.props.scroll)} key="name">Romina Barrett</span>
             </a>
           </div>
           <div style={styles.navigation}>
-            <Navigation />
+            <Navigation
+              isHeader
+            />
           </div>
         </div>
       </div>

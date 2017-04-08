@@ -68,7 +68,7 @@ export default {
     opacity: seen ? '1' : 0,
     marginTop: '2rem',
     transform: seen ? 'translateY(40px)' : 'none',
-    width: '100%',
+    width: 'calc(100% - 15px)',
   }),
   socialLinksList: {
     textAlign: 'center',

@@ -22,14 +22,15 @@ export default {
     verticalAlign: 'middle',
     width: '100%',
   }),
-  buttonWrapper: {
+  buttonWrapper: isHeader => ({
+    margin: '0 10px 10px',
     width: '30%',
     '@media screen and (max-width: 64em)': {
       width: '100%',
-      display: 'flex',
+      display: isHeader ? 'none' : 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: 'column',
     },
-  },
+  }),
 };

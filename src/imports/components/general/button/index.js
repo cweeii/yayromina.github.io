@@ -11,6 +11,7 @@ export default class Button extends React.Component {
     label: PropTypes.string,
     path: PropTypes.string,
     target: PropTypes.string,
+    isHeader: PropTypes.bool,
   }
   state = {
     hover: false,
@@ -22,7 +23,7 @@ export default class Button extends React.Component {
 
   render() {
     return (
-      <div style={styles.buttonWrapper}>
+      <div style={styles.buttonWrapper(this.props.isHeader)}>
         <a
           onClick={() => this.changeLink()}
           tabIndex="0"
