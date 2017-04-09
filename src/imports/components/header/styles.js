@@ -32,6 +32,7 @@ export default {
   },
   logo: {
     display: 'inline-block',
+    outline: '0',
     height: 60,
     width: 60,
   },
