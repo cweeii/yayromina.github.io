@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fad5c28e2614a3be199f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0fd8abdbd94e0b8d570f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34431,7 +34431,7 @@
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
-	        fontSize: hover ? '1.22rem' : '1.2rem',
+	        fontSize: '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: 160,
@@ -53759,7 +53759,7 @@
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
-	        fontSize: hover ? '1.22rem' : '1.2rem',
+	        fontSize: '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
 	        outline: '0',
@@ -54005,6 +54005,16 @@
 	    justifyContent: 'center',
 	    transition: 'all 0.5s',
 	    width: '100%'
+	  },
+	  glass: {
+	    display: 'block',
+	    position: 'absolute',
+	    top: 0,
+	    right: 0,
+	    height: 100,
+	    background: '#FFF',
+	    width: '100%',
+	    zIndex: '999999'
 	  }
 	};
 
@@ -54637,7 +54647,7 @@
 	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
-	        fontSize: hover ? '1.22rem' : '1.2rem',
+	        fontSize: '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: '90%',
@@ -54756,6 +54766,7 @@
 	  }(),
 	  footerType: {
 	    fontSize: '1.2rem',
+	    lineHeight: '1.8rem',
 	    marginTop: '1rem',
 	    textAlign: 'center'
 	  }
@@ -54987,7 +54998,8 @@
 	    }
 
 	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-	      hover: false
+	      hover: false,
+	      isHome: true
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 

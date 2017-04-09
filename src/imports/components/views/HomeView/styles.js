@@ -86,4 +86,14 @@ export default {
     transition: 'all 0.5s',
     width: '100%',
   },
+  glass: {
+    display: 'block',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    height: 100,
+    background: '#FFF',
+    width: '100%',
+    zIndex: '999999',
+  },
 };

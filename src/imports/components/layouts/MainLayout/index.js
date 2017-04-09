@@ -46,10 +46,10 @@ export default class MainLayout extends React.Component {
    );
     return (
       <div style={styles.base}>
-        <Header
-          isHome={this.state.isHome}
-          scroll={this.state.scroll}
-        />
+          <Header
+            isHome={this.state.isHome}
+            scroll={this.state.scroll}
+          />
         {childrenWithProps}
       </div>
     );

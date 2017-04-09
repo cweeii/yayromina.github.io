@@ -16,6 +16,7 @@ export default class Header extends React.Component {
 
   state = {
     hover: false,
+    isHome: true,
   }
 
   render() {

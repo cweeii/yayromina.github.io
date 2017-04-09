@@ -62,7 +62,7 @@ export default {
     boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
     cursor: 'pointer',
     display: 'block',
-    fontSize: hover ? '1.22rem' : '1.2rem',
+    fontSize: '1.2rem',
     height: 45,
     lineHeight: hover ? '44px' : '45px',
     maxWidth: 160,
