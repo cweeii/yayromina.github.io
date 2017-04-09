@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b6e78095cb9268383cdd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4803f925bca970b80d02"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17897,7 +17897,7 @@
 	                _react2['default'].createElement(
 	                  'p',
 	                  { style: _styles2['default'].innerType },
-	                  'I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through thoughtful, performant code. I also have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate users\' needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.'
+	                  'I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through thoughtful, performant code. I have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate users\' needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.'
 	                )
 	              ),
 	              _react2['default'].createElement(
@@ -54879,7 +54879,7 @@
 	    value: function () {
 	      function componentDidMount() {
 	        _imagePreloader2['default'].simplePreload('https://romina.io/static/images/portfolio/campforall.png', 'https://romina.io/static/images/portfolio/emota.png', 'https://romina.io/static/images/portfolio/invision.png', 'https://romina.io/static/images/portfolio/reachify.png');
-	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! You can check out the full repo for this website at https://github.com/yayromina/yayromina.github.io ' + _nodeEmoji2['default'].get('star') + ' ' + _nodeEmoji2['default'].get('sparkles') + ' Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
+	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
 	        document.addEventListener('scroll', this.handleScroll);
 	      }
 

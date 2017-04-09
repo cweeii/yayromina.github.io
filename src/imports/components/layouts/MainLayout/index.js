@@ -19,7 +19,7 @@ export default class MainLayout extends React.Component {
 
   componentDidMount() {
     ImagePreloader.simplePreload('https://romina.io/static/images/portfolio/campforall.png', 'https://romina.io/static/images/portfolio/emota.png', 'https://romina.io/static/images/portfolio/invision.png', 'https://romina.io/static/images/portfolio/reachify.png');
-    console.log(emoji.get('wave') + ' Hi there, thanks for digging my code! You can check out the full repo for this website at https://github.com/yayromina/yayromina.github.io ' + emoji.get('star') + ' ' + emoji.get('sparkles') +' Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! '+ emoji.get('sparkling_heart')); // eslint-disable-line
+    console.log(emoji.get('wave') + ' Hi there, thanks for digging my code! Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! '+ emoji.get('sparkling_heart')); // eslint-disable-line
     document.addEventListener('scroll', this.handleScroll);
   }
   seenAnimationToggle = () => {
