@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "508e09943491e8c67f48"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fad5c28e2614a3be199f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -53762,7 +53762,6 @@
 	        fontSize: hover ? '1.22rem' : '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
-	        maxWidth: 160,
 	        outline: '0',
 	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
 	        outlineOffset: hover ? 15 : 0,
@@ -53783,7 +53782,9 @@
 	  buttonWrapper: function () {
 	    function buttonWrapper(isHeader) {
 	      return {
-	        margin: '0 10px 10px',
+	        margin: '0 auto 10px',
+	        display: 'flex',
+	        alignItems: 'center',
 	        width: '30%',
 	        '@media screen and (max-width: 64em)': {
 	          width: '100%',
@@ -55087,6 +55088,8 @@
 	    alignItems: 'center',
 	    justifyContent: 'space-between',
 	    maxWidth: 1600,
+	    paddingLeft: '1rem',
+	    paddingRight: '1rem',
 	    width: '100%',
 	    margin: '10px auto 0'
 	  },
@@ -55114,7 +55117,6 @@
 	        fill: scroll ? '#FFF' : '#7A1E48',
 	        stroke: scroll ? '#7A1E48' : '#FFF',
 	        alignItems: 'center',
-	        justifyContent: 'center',
 	        flexDirection: 'row',
 	        width: '30%',
 	        fontSize: '1.6rem',

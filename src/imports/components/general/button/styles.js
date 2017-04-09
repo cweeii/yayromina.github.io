@@ -8,7 +8,6 @@ export default {
     fontSize: hover ? '1.22rem' : '1.2rem',
     height: 45,
     lineHeight: hover ? '44px' : '45px',
-    maxWidth: 160,
     outline: '0',
     outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
     outlineOffset: hover ? 15 : 0,
@@ -23,7 +22,9 @@ export default {
     width: '100%',
   }),
   buttonWrapper: isHeader => ({
-    margin: '0 10px 10px',
+    margin: '0 auto 10px',
+    display: 'flex',
+    alignItems: 'center',
     width: '30%',
     '@media screen and (max-width: 64em)': {
       width: '100%',
