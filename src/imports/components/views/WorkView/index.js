@@ -36,7 +36,7 @@ export default class WorkView extends React.Component {
         >
           <div style={styles.base}>
             <h1 style={styles.headline}>Here are a few of my favorite past projects! I was the sole developer for these websites, client and server-side.</h1>
-            <h2 style={styles.tagline}>I currently specialize in React and Wordpress projects.</h2>
+            <h2 style={styles.tagline}>I currently specialize in React projects.</h2>
             <div>
               {/* {Object.keys(portfolio).map((project, index) => (
                 <Project

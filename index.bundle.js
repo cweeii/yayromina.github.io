@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fe3902abb8513025d7ba"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6209f5627eec0439476d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -54115,7 +54115,7 @@
 	              _react2['default'].createElement(
 	                'h2',
 	                { style: _styles2['default'].tagline },
-	                'I currently specialize in React and Wordpress projects.'
+	                'I currently specialize in React projects.'
 	              ),
 	              _react2['default'].createElement(
 	                'div',
