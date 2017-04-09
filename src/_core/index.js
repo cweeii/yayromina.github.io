@@ -18,7 +18,7 @@ import {render}             from 'react-dom';
 ReactGA.initialize('UA-96611992-1');
 
 function fireTracking() {
-  ReactGA.pageview(window.location.hash);
+  ReactGA.pageview(window.location.hash); //eslint-disable-line
 }
 
 function run() {

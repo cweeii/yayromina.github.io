@@ -22,16 +22,16 @@ export default {
     width: '100%',
   }),
   buttonWrapper: isHeader => ({
-    margin: '0 auto 10px',
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
+    margin: '0 auto 10px',
     width: '30%',
     '@media screen and (max-width: 64em)': {
-      width: '100%',
-      display: isHeader ? 'none' : 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      display: isHeader ? 'none' : 'flex',
       flexDirection: 'column',
+      justifyContent: 'center',
+      width: '100%',
     },
   }),
 };
