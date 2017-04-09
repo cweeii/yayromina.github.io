@@ -1,7 +1,7 @@
 # Romina.io
 A simple React-based Portfolio Site written in ES6/ES7.
 
-[Demo/Live Site](http://romina.io)
+[Live Site](http://romina.io)
 
 #### Other Included Stuff
 - `webpack` and `webpack-dev-server` to build/run
@@ -12,3 +12,5 @@ A simple React-based Portfolio Site written in ES6/ES7.
 - `radium` to handle CSS media queries, hover states
 - `animejs` for animation timelines
 - `react-easy-transition` - to manage transitions between views
+
+Learn more about the setup here: [react-es7-router](https://github.com/asidiali/react-es7-starter)
