@@ -40,7 +40,7 @@ export default class AboutView extends React.Component {
               <p style={styles.innerType}>I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through thoughtful, performant code. I have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate users' needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.</p>
             </div>
             <p style={styles.innerType}>I grew up in the Pacific Northwest and currently reside in sunny San Diego, California. When I'm not programming, you'll probably find me at a music festival, practicing bikram, or on a hike with my corgi and partner-in-crime, <a href="https://instagram.com/yaygus" target="_blank" rel="noopener noreferrer">Gus</a>.</p>
-            <p style={styles.footerType}>Looking for a resume? Download it here and feel free to check out my <a href="https://www.linkedin.com/in/rominabarrett/" target="_blank">LinkedIn</a>!</p>
+            <p style={styles.footerType}>Looking for a resume? <a href="../../../RominaBarrett_Resume.pdf" target="_blank">Download it here</a> and feel free to check out my <a href="https://www.linkedin.com/in/rominabarrett/" target="_blank">LinkedIn</a>!</p>
           </div>
         </EasyTransition>
       </div>

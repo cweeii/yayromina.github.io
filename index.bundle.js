@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4803f925bca970b80d02"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "508e09943491e8c67f48"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17914,7 +17914,13 @@
 	              _react2['default'].createElement(
 	                'p',
 	                { style: _styles2['default'].footerType },
-	                'Looking for a resume? Download it here and feel free to check out my ',
+	                'Looking for a resume? ',
+	                _react2['default'].createElement(
+	                  'a',
+	                  { href: '../../../RominaBarrett_Resume.pdf', target: '_blank' },
+	                  'Download it here'
+	                ),
+	                ' and feel free to check out my ',
 	                _react2['default'].createElement(
 	                  'a',
 	                  { href: 'https://www.linkedin.com/in/rominabarrett/', target: '_blank' },
