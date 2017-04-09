@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e20f76590daf272614a4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fe3902abb8513025d7ba"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -55102,6 +55102,7 @@
 	  }(),
 	  logoContainer: {
 	    alignItems: 'center',
+	    fill: '#7A1E48',
 	    display: 'flex',
 	    flexDirection: 'row',
 	    fontSize: '1.6rem',

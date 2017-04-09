@@ -20,6 +20,7 @@ export default {
   }),
   logoContainer: {
     alignItems: 'center',
+    fill: '#7A1E48',
     display: 'flex',
     flexDirection: 'row',
     fontSize: '1.6rem',
