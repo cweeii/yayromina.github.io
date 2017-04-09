@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "62e3afd649a11757e95c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e20f76590daf272614a4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17917,7 +17917,7 @@
 	                'Looking for a resume? ',
 	                _react2['default'].createElement(
 	                  'a',
-	                  { href: '../../../RominaBarrett_Resume.pdf', target: '_blank' },
+	                  { href: '../../../static/RominaBarrett_Resume.pdf', target: '_blank' },
 	                  'Download it here'
 	                ),
 	                ' and feel free to check out my ',
@@ -54866,18 +54866,11 @@
 
 	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MainLayout.__proto__ || Object.getPrototypeOf(MainLayout)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
 	      seenAnimation: false,
-	      isHome: false,
-	      scroll: false
+	      isHome: false
 	    }, _this.seenAnimationToggle = function () {
 	      _this.setState({ seenAnimation: true });
 	    }, _this.isHome = function (home) {
 	      _this.setState({ isHome: home });
-	    }, _this.handleScroll = function () {
-	      if (document.body.scrollTop >= 40) {
-	        _this.setState({ scroll: true });
-	      } else {
-	        _this.setState({ scroll: false });
-	      }
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
@@ -54887,7 +54880,6 @@
 	      function componentDidMount() {
 	        _imagePreloader2['default'].simplePreload('https://romina.io/static/images/portfolio/campforall.png', 'https://romina.io/static/images/portfolio/emota.png', 'https://romina.io/static/images/portfolio/invision.png', 'https://romina.io/static/images/portfolio/reachify.png');
 	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! Feel free to check it out at https://github.com/yayromina/yayromina.github.io. Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
-	        document.addEventListener('scroll', this.handleScroll);
 	      }
 
 	      return componentDidMount;
@@ -54908,8 +54900,7 @@
 	          'div',
 	          { style: _styles2['default'].base },
 	          _react2['default'].createElement(_header2['default'], {
-	            isHome: this.state.isHome,
-	            scroll: this.state.scroll
+	            isHome: this.state.isHome
 	          }),
 	          childrenWithProps
 	        );
@@ -55000,14 +54991,14 @@
 
 	        return _react2['default'].createElement(
 	          'div',
-	          { style: _styles2['default'].header(this.props.isHome, this.props.scroll), key: 'header' },
+	          { style: _styles2['default'].header(this.props.isHome), key: 'header' },
 	          _react2['default'].createElement(
 	            'div',
 	            { style: _styles2['default'].base },
 	            _react2['default'].createElement(
 	              'div',
 	              {
-	                style: _styles2['default'].logoContainer(this.props.scroll),
+	                style: _styles2['default'].logoContainer,
 	                onMouseEnter: function () {
 	                  function onMouseEnter() {
 	                    return _this2.setState({
@@ -55030,6 +55021,7 @@
 	              _react2['default'].createElement(
 	                'a',
 	                {
+	                  tabIndex: '0',
 	                  onClick: function () {
 	                    function onClick() {
 	                      _reactRouter.hashHistory.push('/');
@@ -55046,7 +55038,7 @@
 	                ' ',
 	                _react2['default'].createElement(
 	                  'span',
-	                  { style: _styles2['default'].name(this.props.scroll), key: 'name' },
+	                  { style: _styles2['default'].name, key: 'name' },
 	                  'Romina Barrett'
 	                )
 	              )
@@ -55068,8 +55060,7 @@
 
 	  return Header;
 	}(_react2['default'].Component), _class2.propTypes = {
-	  isHome: _react.PropTypes.bool,
-	  scroll: _react.PropTypes.bool
+	  isHome: _react.PropTypes.bool
 	}, _temp2)) || _class;
 
 	exports['default'] = Header;
@@ -55095,9 +55086,8 @@
 	    width: '100%'
 	  },
 	  header: function () {
-	    function header(home, scroll) {
+	    function header(home) {
 	      return {
-	        // background: scroll ? 'rgba(157,32,83,0.9)' : 'transparent',
 	        left: 0,
 	        padding: '0.5rem 0',
 	        position: 'absolute',
@@ -55110,48 +55100,32 @@
 
 	    return header;
 	  }(),
-	  logoContainer: function () {
-	    function logoContainer(scroll) {
-	      return {
-	        alignItems: 'center',
-	        color: scroll ? '#FFF' : '#7A1E48',
-	        display: 'flex',
-	        fill: scroll ? '#FFF' : '#7A1E48',
-	        flexDirection: 'row',
-	        fontSize: '1.6rem',
-	        stroke: scroll ? '#7A1E48' : '#FFF',
-	        width: '30%',
-	        ':hover': {
-	          color: '#571B3C',
-	          fill: '#571B3C'
-	        }
-	      };
+	  logoContainer: {
+	    alignItems: 'center',
+	    display: 'flex',
+	    flexDirection: 'row',
+	    fontSize: '1.6rem',
+	    width: '30%',
+	    ':hover': {
+	      color: '#571B3C',
+	      fill: '#571B3C'
 	    }
-
-	    return logoContainer;
-	  }(),
+	  },
 	  logo: {
 	    display: 'inline-block',
 	    height: 60,
 	    width: 60
 	  },
-	  name: function () {
-	    function name(scroll) {
-	      return {
-	        // color: scroll ? '#FFF' : '#7A1E48',
-	        position: 'relative',
-	        top: -20,
-	        ':hover': {
-	          color: '#571B3C'
-	        },
-	        '@media screen and (max-width: 64rem)': {
-	          display: 'none'
-	        }
-	      };
+	  name: {
+	    position: 'relative',
+	    top: -20,
+	    ':hover': {
+	      color: '#571B3C'
+	    },
+	    '@media screen and (max-width: 64rem)': {
+	      display: 'none'
 	    }
-
-	    return name;
-	  }(),
+	  },
 	  navigation: {
 	    width: '40%'
 	  }

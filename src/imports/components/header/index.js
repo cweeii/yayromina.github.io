@@ -11,7 +11,6 @@ export default class Header extends React.Component {
 
   static propTypes = {
     isHome: PropTypes.bool,
-    scroll: PropTypes.bool,
   }
 
   state = {
@@ -21,10 +20,10 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div style={styles.header(this.props.isHome, this.props.scroll)} key="header">
+      <div style={styles.header(this.props.isHome)} key="header">
         <div style={styles.base}>
           <div
-            style={styles.logoContainer(this.props.scroll)}
+            style={styles.logoContainer}
             onMouseEnter={() =>
              this.setState({
                hover: true,
@@ -37,9 +36,10 @@ export default class Header extends React.Component {
            }
           >
             <a
-                onClick={() => { hashHistory.push('/')}}
-                >
-              <span style={styles.logo}><Logo /></span> <span style={styles.name(this.props.scroll)} key="name">Romina Barrett</span>
+              tabIndex="0"
+              onClick={() => { hashHistory.push('/'); }}
+            >
+              <span style={styles.logo}><Logo /></span> <span style={styles.name} key="name">Romina Barrett</span>
             </a>
           </div>
           <div style={styles.navigation}>

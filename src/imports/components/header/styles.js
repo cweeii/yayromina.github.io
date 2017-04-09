@@ -9,8 +9,7 @@ export default {
     paddingRight: '1rem',
     width: '100%',
   },
-  header: (home, scroll) => ({
-    // background: scroll ? 'rgba(157,32,83,0.9)' : 'transparent',
+  header: home => ({
     left: 0,
     padding: '0.5rem 0',
     position: 'absolute',
@@ -19,27 +18,23 @@ export default {
     width: '100%',
     zIndex: '99999',
   }),
-  logoContainer: scroll => ({
+  logoContainer: {
     alignItems: 'center',
-    color: scroll ? '#FFF' : '#7A1E48',
     display: 'flex',
-    fill: scroll ? '#FFF' : '#7A1E48',
     flexDirection: 'row',
     fontSize: '1.6rem',
-    stroke: scroll ? '#7A1E48' : '#FFF',
     width: '30%',
     ':hover': {
       color: '#571B3C',
       fill: '#571B3C',
     },
-  }),
+  },
   logo: {
     display: 'inline-block',
     height: 60,
     width: 60,
   },
-  name: scroll => ({
-    // color: scroll ? '#FFF' : '#7A1E48',
+  name: {
     position: 'relative',
     top: -20,
     ':hover': {
@@ -48,7 +43,7 @@ export default {
     '@media screen and (max-width: 64rem)': {
       display: 'none',
     },
-  }),
+  },
   navigation: {
     width: '40%',
   },
