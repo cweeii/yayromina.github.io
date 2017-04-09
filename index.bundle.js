@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f02539e21af6e1068f13"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "62e3afd649a11757e95c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -54886,7 +54886,7 @@
 	    value: function () {
 	      function componentDidMount() {
 	        _imagePreloader2['default'].simplePreload('https://romina.io/static/images/portfolio/campforall.png', 'https://romina.io/static/images/portfolio/emota.png', 'https://romina.io/static/images/portfolio/invision.png', 'https://romina.io/static/images/portfolio/reachify.png');
-	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
+	        console.log(_nodeEmoji2['default'].get('wave') + ' Hi there, thanks for digging my code! Feel free to check it out at https://github.com/yayromina/yayromina.github.io. Please contact me at hi@romina.io or through this site if you\'re interested in working together! Thank you! ' + _nodeEmoji2['default'].get('sparkling_heart')); // eslint-disable-line
 	        document.addEventListener('scroll', this.handleScroll);
 	      }
 
