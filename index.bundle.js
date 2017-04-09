@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0fd8abdbd94e0b8d570f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f02539e21af6e1068f13"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17743,7 +17743,7 @@
 	_reactGa2['default'].initialize('UA-96611992-1');
 
 	function fireTracking() {
-	  _reactGa2['default'].pageview(window.location.hash);
+	  _reactGa2['default'].pageview(window.location.hash); //eslint-disable-line
 	}
 
 	function run() {
@@ -33936,40 +33936,40 @@
 	exports['default'] = {
 	  base: {
 	    alignItems: 'center',
-	    minHeight: '100vh',
-	    width: '100%',
 	    display: 'flex',
-	    padding: '8rem 4rem 4rem',
 	    flexDirection: 'column',
 	    justifyContent: 'center',
+	    minHeight: '100vh',
+	    padding: '8rem 4rem 4rem',
+	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      padding: '6rem 1rem 1rem',
-	      marginBottom: '2rem'
+	      marginBottom: '2rem',
+	      padding: '6rem 1rem 1rem'
 	    }
 	  },
 	  type: {
-	    marginBottom: '2rem',
 	    fontSize: '1.4rem',
-	    padding: '1rem',
 	    lineHeight: '2rem',
+	    marginBottom: '2rem',
 	    maxWidth: '50rem',
+	    padding: '1rem',
 	    textAlign: 'center',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      padding: 0,
 	      maxWidth: '90%',
+	      padding: 0,
 	      width: '100%'
 	    }
 	  },
 	  innerType: {
 	    fontSize: '1.4rem',
-	    padding: '1rem',
 	    lineHeight: '2rem',
+	    padding: '1rem',
 	    textAlign: 'center',
 	    width: '50rem',
 	    '@media screen and (max-width: 64em)': {
-	      padding: 0,
 	      maxWidth: '90%',
+	      padding: 0,
 	      width: '100%'
 	    }
 	  },
@@ -33999,10 +33999,10 @@
 	  },
 	  halfTextWrapper: {
 	    display: 'flex',
+	    flexDirection: 'row',
+	    flexWrap: 'nowrap',
 	    justifyContent: 'center',
 	    marginTop: '2rem',
-	    flexWrap: 'nowrap',
-	    flexDirection: 'row',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
 	      marginBottom: '1rem',
@@ -34323,8 +34323,8 @@
 	    color: '#571B3C',
 	    display: 'inline-block',
 	    fontSize: '1.6rem',
-	    margin: '0 10px',
 	    listStyleType: 'none',
+	    margin: '0 10px',
 	    opacity: '1',
 	    ':hover': {
 	      opacity: '0.8'
@@ -34356,15 +34356,15 @@
 	exports['default'] = {
 	  base: {
 	    alignItems: 'center',
-	    minHeight: '100vh',
-	    width: '100%',
 	    display: 'flex',
-	    padding: '8rem 4rem 4rem',
 	    flexDirection: 'column',
 	    justifyContent: 'center',
+	    minHeight: '100vh',
+	    padding: '8rem 4rem 4rem',
+	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      padding: '6rem 1rem 1rem',
-	      marginBottom: '2rem'
+	      marginBottom: '2rem',
+	      padding: '6rem 1rem 1rem'
 	    }
 	  },
 	  headline: {
@@ -34381,9 +34381,9 @@
 	    fontSize: '1.4rem',
 	    lineHeight: '2rem',
 	    marginBottom: '2rem',
+	    maxWidth: '40rem',
 	    textAlign: 'center',
 	    width: '100%',
-	    maxWidth: '40rem',
 	    '@media screen and (max-width: 64em)': {
 	      marginBottom: '1rem'
 	    }
@@ -34410,18 +34410,18 @@
 	    return navLinks;
 	  }(),
 	  socialLinksList: {
-	    textAlign: 'center',
-	    listStyleType: 'none'
+	    listStyleType: 'none',
+	    textAlign: 'center'
 	  },
 	  input: {
+	    background: '#EFEFEF',
 	    border: 0,
-	    outline: 0,
-	    marginBottom: '0.65rem',
 	    borderRadius: 3,
 	    fontSize: '1.2rem',
+	    marginBottom: '0.65rem',
+	    outline: 0,
 	    padding: '0.5rem 0.5rem 0.5rem 0.65rem',
-	    width: '100%',
-	    background: '#EFEFEF'
+	    width: '100%'
 	  },
 	  submit: function () {
 	    function submit(hover) {
@@ -53782,16 +53782,16 @@
 	  buttonWrapper: function () {
 	    function buttonWrapper(isHeader) {
 	      return {
-	        margin: '0 auto 10px',
-	        display: 'flex',
 	        alignItems: 'center',
+	        display: 'flex',
+	        margin: '0 auto 10px',
 	        width: '30%',
 	        '@media screen and (max-width: 64em)': {
-	          width: '100%',
-	          display: isHeader ? 'none' : 'flex',
 	          alignItems: 'center',
+	          display: isHeader ? 'none' : 'flex',
+	          flexDirection: 'column',
 	          justifyContent: 'center',
-	          flexDirection: 'column'
+	          width: '100%'
 	        }
 	      };
 	    }
@@ -53884,19 +53884,19 @@
 	});
 	exports['default'] = {
 	  base: {
-	    height: '100vh',
-	    width: '100%',
 	    display: 'flex',
 	    flexDirection: 'row',
 	    flexWrap: 'nowrap',
-	    justifyContent: 'center'
+	    height: '100vh',
+	    justifyContent: 'center',
+	    width: '100%'
 	  },
 	  headlines: {
 	    // display: 'none',
-	    marginTop: '-100px',
 	    lineHeight: '2.6rem',
-	    textAlign: 'center',
+	    marginTop: '-100px',
 	    position: 'relative',
+	    textAlign: 'center',
 	    top: '20px',
 	    width: '100%'
 	  },
@@ -53907,15 +53907,15 @@
 	  circle: function () {
 	    function circle(seen) {
 	      return {
-	        height: 100,
-	        width: 100,
-	        borderRadius: '50%',
 	        background: '#7A1E48',
-	        margin: 'auto',
+	        borderRadius: '50%',
 	        display: 'block',
+	        height: 100,
+	        margin: 'auto',
 	        opacity: seen ? '0' : '1',
 	        position: 'absolute',
-	        top: 0
+	        top: 0,
+	        width: 100
 	      };
 	    }
 
@@ -53933,9 +53933,9 @@
 	  tagline: function () {
 	    function tagline(seen) {
 	      return {
+	        marginTop: '-100px',
 	        opacity: seen ? '1' : '0',
-	        transform: seen ? 'translateY(30px)' : 'none',
-	        marginTop: '-100px'
+	        transform: seen ? 'translateY(30px)' : 'none'
 	      };
 	    }
 
@@ -53945,23 +53945,22 @@
 	    function span(seen) {
 	      return {
 	        display: 'inline-block',
-	        // float: 'left',
-	        transform: seen ? 'translateY(-85px)' : 'scaleY(0)',
-	        opacity: seen ? '1' : '0'
+	        opacity: seen ? '1' : '0',
+	        transform: seen ? 'translateY(-85px)' : 'scaleY(0)'
 	      };
 	    }
 
 	    return span;
 	  }(),
 	  logo: {
-	    height: 100,
-	    width: 100,
-	    fill: '#7A1E48',
-	    margin: '-150px auto auto',
 	    display: 'block',
+	    fill: '#7A1E48',
+	    height: 100,
+	    margin: '-150px auto auto',
 	    opacity: 1,
 	    position: 'relative',
-	    top: '-170px'
+	    top: '-170px',
+	    width: 100
 	  },
 	  headline: {
 	    fontSize: '2.5rem'
@@ -53970,8 +53969,8 @@
 	    function socialLinks(seen) {
 	      return {
 	        opacity: seen ? '1' : '0',
-	        transform: seen ? 'translateY(80px)' : 'none',
 	        position: 'relative',
+	        transform: seen ? 'translateY(80px)' : 'none',
 	        zIndex: '9'
 	      };
 	    }
@@ -53981,8 +53980,8 @@
 	  navLinks: function () {
 	    function navLinks(seen) {
 	      return {
-	        opacity: seen ? '1' : 0,
 	        marginTop: '2rem',
+	        opacity: seen ? '1' : 0,
 	        transform: seen ? 'translateY(40px)' : 'none',
 	        width: 'calc(100% - 15px)'
 	      };
@@ -53991,30 +53990,20 @@
 	    return navLinks;
 	  }(),
 	  socialLinksList: {
-	    textAlign: 'center',
-	    listStyleType: 'none'
+	    listStyleType: 'none',
+	    textAlign: 'center'
 	  },
 	  homeContainer: {
+	    alignItems: 'center',
 	    color: '#341931',
-	    position: 'relative',
 	    display: 'flex',
-	    paddingTop: 100,
 	    flexDirection: 'column',
 	    flexWrap: 'nowrap',
-	    alignItems: 'center',
 	    justifyContent: 'center',
+	    paddingTop: 100,
+	    position: 'relative',
 	    transition: 'all 0.5s',
 	    width: '100%'
-	  },
-	  glass: {
-	    display: 'block',
-	    position: 'absolute',
-	    top: 0,
-	    right: 0,
-	    height: 100,
-	    background: '#FFF',
-	    width: '100%',
-	    zIndex: '999999'
 	  }
 	};
 
@@ -54628,15 +54617,15 @@
 	exports['default'] = {
 	  base: {
 	    alignItems: 'center',
-	    minHeight: '100vh',
-	    width: '100%',
 	    display: 'flex',
-	    padding: '8rem 4rem 4rem',
 	    flexDirection: 'column',
 	    justifyContent: 'center',
+	    minHeight: '100vh',
+	    padding: '8rem 4rem 4rem',
+	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
-	      padding: '6rem 1rem 1rem',
-	      marginBottom: '2rem'
+	      marginBottom: '2rem',
+	      padding: '6rem 1rem 1rem'
 	    }
 	  },
 	  button: function () {
@@ -54650,8 +54639,8 @@
 	        fontSize: '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
-	        maxWidth: '90%',
 	        margin: '40px auto 0',
+	        maxWidth: '90%',
 	        outline: '0',
 	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
 	        outlineOffset: hover ? 15 : 0,
@@ -54698,12 +54687,12 @@
 	    }
 	  },
 	  projectWrapper: {
-	    display: 'flex',
 	    alignItems: 'center',
+	    display: 'flex',
+	    flexDirection: 'row',
 	    justifyContent: 'center',
 	    marginBottom: '5vh',
 	    padding: '2rem',
-	    flexDirection: 'row',
 	    width: '100%',
 	    '@media screen and (max-width: 64em)': {
 	      flexDirection: 'column',
@@ -54712,9 +54701,9 @@
 	    }
 	  },
 	  projectLogo: {
-	    maxWidth: '65%',
 	    display: 'block',
 	    margin: '0 auto 1.6rem',
+	    maxWidth: '65%',
 	    '@media screen and (max-width: 64em)': {
 	      width: '100%',
 	      maxWidth: 200
@@ -54733,8 +54722,8 @@
 	  projectImageWrapper: function () {
 	    function projectImageWrapper(order) {
 	      return {
-	        padding: '2rem',
 	        order: order === 'odd' ? '1' : '2',
+	        padding: '2rem',
 	        width: '66%',
 	        '@media screen and (max-width: 64em)': {
 	          order: '2',
@@ -54750,9 +54739,9 @@
 	      return {
 	        fontSize: '1.4rem',
 	        lineHeight: '2rem',
-	        textAlign: 'center',
-	        padding: '0.8rem',
 	        order: order === 'odd' ? '2' : '1',
+	        padding: '0.8rem',
+	        textAlign: 'center',
 	        width: '33%',
 	        '@media screen and (max-width: 64em)': {
 	          marginTop: '2rem',
@@ -55096,26 +55085,26 @@
 	});
 	exports['default'] = {
 	  base: {
-	    display: 'flex',
 	    alignItems: 'center',
+	    display: 'flex',
 	    justifyContent: 'space-between',
+	    margin: '10px auto 0',
 	    maxWidth: 1600,
 	    paddingLeft: '1rem',
 	    paddingRight: '1rem',
-	    width: '100%',
-	    margin: '10px auto 0'
+	    width: '100%'
 	  },
 	  header: function () {
 	    function header(home, scroll) {
 	      return {
 	        // background: scroll ? 'rgba(157,32,83,0.9)' : 'transparent',
+	        left: 0,
 	        padding: '0.5rem 0',
 	        position: 'absolute',
-	        left: 0,
-	        zIndex: '99999',
 	        top: home ? -200 : 0,
+	        transition: 'top 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5), background 0.3s',
 	        width: '100%',
-	        transition: 'top 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5), background 0.3s'
+	        zIndex: '99999'
 	      };
 	    }
 
@@ -55124,14 +55113,14 @@
 	  logoContainer: function () {
 	    function logoContainer(scroll) {
 	      return {
-	        display: 'flex',
-	        color: scroll ? '#FFF' : '#7A1E48',
-	        fill: scroll ? '#FFF' : '#7A1E48',
-	        stroke: scroll ? '#7A1E48' : '#FFF',
 	        alignItems: 'center',
+	        color: scroll ? '#FFF' : '#7A1E48',
+	        display: 'flex',
+	        fill: scroll ? '#FFF' : '#7A1E48',
 	        flexDirection: 'row',
-	        width: '30%',
 	        fontSize: '1.6rem',
+	        stroke: scroll ? '#7A1E48' : '#FFF',
+	        width: '30%',
 	        ':hover': {
 	          color: '#571B3C',
 	          fill: '#571B3C'
@@ -55143,8 +55132,8 @@
 	  }(),
 	  logo: {
 	    display: 'inline-block',
-	    width: 60,
-	    height: 60
+	    height: 60,
+	    width: 60
 	  },
 	  name: function () {
 	    function name(scroll) {
@@ -56899,9 +56888,9 @@
 	});
 	exports['default'] = {
 	  base: {
-	    width: '100%',
 	    margin: 'auto',
-	    maxWidth: 1600
+	    maxWidth: 1600,
+	    width: '100%'
 	  }
 	};
 
