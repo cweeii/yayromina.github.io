@@ -3,8 +3,8 @@ export default{
     color: '#571B3C',
     display: 'inline-block',
     fontSize: '1.6rem',
-    margin: '0 10px',
     listStyleType: 'none',
+    margin: '0 10px',
     opacity: '1',
     ':hover': {
       opacity: '0.8',

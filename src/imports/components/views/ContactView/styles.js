@@ -1,15 +1,15 @@
 export default {
   base: {
     alignItems: 'center',
-    minHeight: '100vh',
-    width: '100%',
     display: 'flex',
-    padding: '8rem 4rem 4rem',
     flexDirection: 'column',
     justifyContent: 'center',
+    minHeight: '100vh',
+    padding: '8rem 4rem 4rem',
+    width: '100%',
     '@media screen and (max-width: 64em)': {
-      padding: '6rem 1rem 1rem',
       marginBottom: '2rem',
+      padding: '6rem 1rem 1rem',
     },
   },
   headline: {
@@ -26,9 +26,9 @@ export default {
     fontSize: '1.4rem',
     lineHeight: '2rem',
     marginBottom: '2rem',
+    maxWidth: '40rem',
     textAlign: 'center',
     width: '100%',
-    maxWidth: '40rem',
     '@media screen and (max-width: 64em)': {
       marginBottom: '1rem',
     },
@@ -43,18 +43,18 @@ export default {
     transform: seen ? 'translateY(20px)' : 'none',
   }),
   socialLinksList: {
-    textAlign: 'center',
     listStyleType: 'none',
+    textAlign: 'center',
   },
   input: {
+    background: '#EFEFEF',
     border: 0,
-    outline: 0,
-    marginBottom: '0.65rem',
     borderRadius: 3,
     fontSize: '1.2rem',
+    marginBottom: '0.65rem',
+    outline: 0,
     padding: '0.5rem 0.5rem 0.5rem 0.65rem',
     width: '100%',
-    background: '#EFEFEF',
   },
   submit: hover => ({
     background: '#FFF',

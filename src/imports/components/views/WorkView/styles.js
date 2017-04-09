@@ -1,15 +1,15 @@
 export default {
   base: {
     alignItems: 'center',
-    minHeight: '100vh',
-    width: '100%',
     display: 'flex',
-    padding: '8rem 4rem 4rem',
     flexDirection: 'column',
     justifyContent: 'center',
+    minHeight: '100vh',
+    padding: '8rem 4rem 4rem',
+    width: '100%',
     '@media screen and (max-width: 64em)': {
-      padding: '6rem 1rem 1rem',
       marginBottom: '2rem',
+      padding: '6rem 1rem 1rem',
     },
   },
   button: hover => ({
@@ -21,8 +21,8 @@ export default {
     fontSize: '1.2rem',
     height: 45,
     lineHeight: hover ? '44px' : '45px',
-    maxWidth: '90%',
     margin: '40px auto 0',
+    maxWidth: '90%',
     outline: '0',
     outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
     outlineOffset: hover ? 15 : 0,
@@ -65,12 +65,12 @@ export default {
     },
   },
   projectWrapper: {
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'center',
     marginBottom: '5vh',
     padding: '2rem',
-    flexDirection: 'row',
     width: '100%',
     '@media screen and (max-width: 64em)': {
       flexDirection: 'column',
@@ -79,9 +79,9 @@ export default {
     },
   },
   projectLogo: {
-    maxWidth: '65%',
     display: 'block',
     margin: '0 auto 1.6rem',
+    maxWidth: '65%',
     '@media screen and (max-width: 64em)': {
       width: '100%',
       maxWidth: 200,
@@ -98,8 +98,8 @@ export default {
     },
   },
   projectImageWrapper: order => ({
-    padding: '2rem',
     order: order === 'odd' ? '1' : '2',
+    padding: '2rem',
     width: '66%',
     '@media screen and (max-width: 64em)': {
       order: '2',
@@ -109,9 +109,9 @@ export default {
   projectDescriptionWrapper: order => ({
     fontSize: '1.4rem',
     lineHeight: '2rem',
-    textAlign: 'center',
-    padding: '0.8rem',
     order: order === 'odd' ? '2' : '1',
+    padding: '0.8rem',
+    textAlign: 'center',
     width: '33%',
     '@media screen and (max-width: 64em)': {
       marginTop: '2rem',
