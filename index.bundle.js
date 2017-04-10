@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "42e3c818c535996e9a14"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5f2362a275158cc097ec"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17889,7 +17889,7 @@
 	                {
 	                  style: _styles2['default'].headline
 	                },
-	                'I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.'
+	                'Well hello! My name is Romina Barrett and I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.'
 	              ),
 	              _react2['default'].createElement(
 	                'div',
