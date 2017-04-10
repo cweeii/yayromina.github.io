@@ -34,7 +34,7 @@ export default class AboutView extends React.Component {
             <h1
               style={styles.headline}
             >
-              I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.
+              Well hello! My name is Romina Barrett and I am an award-winning developer and Woman of the Year nominee. I create web experiences that delight users, drive business goals, and hopefully make the world a better place.
             </h1>
             <div style={styles.halfTextWrapper}>
               <p style={styles.innerType}>I love creating cutting-edge, gorgeous websites that push the boundaries of CSS and javascript. I have dedicated my career to bringing stunning designs to life through thoughtful, performant code. I have years of experience with split testing and conversion optimization, through which I learned to harness the power of data and anticipate users' needs. I love the competitive nature of AB testing, and my work has helped businesses triple their conversion rates.</p>
