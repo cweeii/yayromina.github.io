@@ -36,6 +36,9 @@ export default {
     verticalAlign: 'middle',
     width: '100%',
     zIndex: 999,
+    '@media screen and (max-width: 64em)': {
+      margin: '40px auto',
+    },
   }),
   headline: {
     fontSize: '1.8rem',
@@ -78,15 +81,16 @@ export default {
       padding: 0,
     },
   },
-  projectLogo: {
-    display: 'block',
+  projectLogo: mobile => ({
+    display: mobile ? 'none' : 'block',
     margin: '0 auto 1.6rem',
     maxWidth: '65%',
     '@media screen and (max-width: 64em)': {
       width: '100%',
+      display: mobile ? 'block' : 'none',
       maxWidth: 200,
     },
-  },
+  }),
   projectImage: {
     borderRadius: '3px',
     boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15)',
@@ -102,7 +106,8 @@ export default {
     padding: '2rem',
     width: '66%',
     '@media screen and (max-width: 64em)': {
-      order: '2',
+      order: '1',
+      padding: '2rem 2rem 0',
       width: '100%',
     },
   }),
@@ -115,7 +120,7 @@ export default {
     width: '33%',
     '@media screen and (max-width: 64em)': {
       marginTop: '2rem',
-      order: '1',
+      order: '2',
       width: '100%',
     },
   }),

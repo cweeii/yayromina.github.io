@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e579dc3764ab14e5964a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4d9207e1a3d1cfe523c9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -54137,6 +54137,19 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo(true),
+	                          src: '../../../../../static/images/portfolio/campforall-logo.png',
+	                          alt: 'Camp For All Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://campforall.org/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
 	                          style: _styles2['default'].projectImage,
 	                          src: '../../../../../static/images/portfolio/campforall.png',
 	                          alt: 'Romina Barrett and Camp For All',
@@ -54155,7 +54168,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo,
+	                          style: _styles2['default'].projectLogo(false),
 	                          src: '../../../../../static/images/portfolio/campforall-logo.png',
 	                          alt: 'Camp For All Logo'
 	                        })
@@ -54213,6 +54226,19 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo(true),
+	                          src: '../../../../../static/images/portfolio/emota-logo.png',
+	                          alt: 'Emota Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://emota.com',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
 	                          style: _styles2['default'].projectImage,
 	                          src: '../../../../../static/images/portfolio/emota.png',
 	                          alt: 'Romina Barrett and Emota',
@@ -54231,7 +54257,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo,
+	                          style: _styles2['default'].projectLogo(false),
 	                          src: '../../../../../static/images/portfolio/emota-logo.png',
 	                          alt: 'Emota Logo'
 	                        })
@@ -54289,6 +54315,19 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo(true),
+	                          src: '../../../../../static/images/portfolio/invision-logo.png',
+	                          alt: 'Invision Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://invisionstudio.com/',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
 	                          style: _styles2['default'].projectImage,
 	                          src: '../../../../../static/images/portfolio/invision.png',
 	                          alt: 'Romina Barrett and Invision Studio',
@@ -54307,7 +54346,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo,
+	                          style: _styles2['default'].projectLogo(false),
 	                          src: '../../../../../static/images/portfolio/invision-logo.png',
 	                          alt: 'Invision Logo'
 	                        })
@@ -54365,6 +54404,19 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
+	                          style: _styles2['default'].projectLogo(true),
+	                          src: '../../../../../static/images/portfolio/reachify-logo.png',
+	                          alt: 'Reachify Logo'
+	                        })
+	                      ),
+	                      _react2['default'].createElement(
+	                        'a',
+	                        {
+	                          href: 'http://reachify.io',
+	                          target: '_blank',
+	                          rel: 'noreferrer noopener'
+	                        },
+	                        _react2['default'].createElement('img', {
 	                          style: _styles2['default'].projectImage,
 	                          src: '../../../../../static/images/portfolio/reachify.png',
 	                          alt: 'Romina Barrett and Reachify',
@@ -54383,7 +54435,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo,
+	                          style: _styles2['default'].projectLogo(false),
 	                          src: '../../../../../static/images/portfolio/reachify-logo.png',
 	                          alt: 'Reachify Logo'
 	                        })
@@ -54653,7 +54705,10 @@
 	        transition: 'all 1000ms cubic-bezier(0.19, 1, 0.22, 1)',
 	        verticalAlign: 'middle',
 	        width: '100%',
-	        zIndex: 999
+	        zIndex: 999,
+	        '@media screen and (max-width: 64em)': {
+	          margin: '40px auto'
+	        }
 	      };
 	    }
 
@@ -54700,15 +54755,22 @@
 	      padding: 0
 	    }
 	  },
-	  projectLogo: {
-	    display: 'block',
-	    margin: '0 auto 1.6rem',
-	    maxWidth: '65%',
-	    '@media screen and (max-width: 64em)': {
-	      width: '100%',
-	      maxWidth: 200
+	  projectLogo: function () {
+	    function projectLogo(mobile) {
+	      return {
+	        display: mobile ? 'none' : 'block',
+	        margin: '0 auto 1.6rem',
+	        maxWidth: '65%',
+	        '@media screen and (max-width: 64em)': {
+	          width: '100%',
+	          display: mobile ? 'block' : 'none',
+	          maxWidth: 200
+	        }
+	      };
 	    }
-	  },
+
+	    return projectLogo;
+	  }(),
 	  projectImage: {
 	    borderRadius: '3px',
 	    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15)',
@@ -54726,7 +54788,8 @@
 	        padding: '2rem',
 	        width: '66%',
 	        '@media screen and (max-width: 64em)': {
-	          order: '2',
+	          order: '1',
+	          padding: '2rem 2rem 0',
 	          width: '100%'
 	        }
 	      };
@@ -54745,7 +54808,7 @@
 	        width: '33%',
 	        '@media screen and (max-width: 64em)': {
 	          marginTop: '2rem',
-	          order: '1',
+	          order: '2',
 	          width: '100%'
 	        }
 	      };

@@ -57,6 +57,17 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
+                        style={styles.projectLogo(true)}
+                        src="../../../../../static/images/portfolio/campforall-logo.png"
+                        alt="Camp For All Logo"
+                      />
+                    </a>
+                    <a
+                      href="http://campforall.org/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img
                         style={styles.projectImage}
                         src="../../../../../static/images/portfolio/campforall.png"
                         alt="Romina Barrett and Camp For All"
@@ -71,7 +82,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo}
+                        style={styles.projectLogo(false)}
                         src="../../../../../static/images/portfolio/campforall-logo.png"
                         alt="Camp For All Logo"
                       />
@@ -107,6 +118,17 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
+                        style={styles.projectLogo(true)}
+                        src="../../../../../static/images/portfolio/emota-logo.png"
+                        alt="Emota Logo"
+                      />
+                    </a>
+                    <a
+                      href="http://emota.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img
                         style={styles.projectImage}
                         src="../../../../../static/images/portfolio/emota.png"
                         alt="Romina Barrett and Emota"
@@ -121,7 +143,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo}
+                        style={styles.projectLogo(false)}
                         src="../../../../../static/images/portfolio/emota-logo.png"
                         alt="Emota Logo"
                       />
@@ -157,6 +179,17 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
+                        style={styles.projectLogo(true)}
+                        src="../../../../../static/images/portfolio/invision-logo.png"
+                        alt="Invision Logo"
+                      />
+                    </a>
+                    <a
+                      href="http://invisionstudio.com/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img
                         style={styles.projectImage}
                         src="../../../../../static/images/portfolio/invision.png"
                         alt="Romina Barrett and Invision Studio"
@@ -171,7 +204,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo}
+                        style={styles.projectLogo(false)}
                         src="../../../../../static/images/portfolio/invision-logo.png"
                         alt="Invision Logo"
                       />
@@ -207,6 +240,17 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
+                        style={styles.projectLogo(true)}
+                        src="../../../../../static/images/portfolio/reachify-logo.png"
+                        alt="Reachify Logo"
+                      />
+                    </a>
+                    <a
+                      href="http://reachify.io"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img
                         style={styles.projectImage}
                         src="../../../../../static/images/portfolio/reachify.png"
                         alt="Romina Barrett and Reachify"
@@ -221,7 +265,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo}
+                        style={styles.projectLogo(false)}
                         src="../../../../../static/images/portfolio/reachify-logo.png"
                         alt="Reachify Logo"
                       />
