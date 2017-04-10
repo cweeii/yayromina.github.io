@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a9dc3045c8b1adaa7a98"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e579dc3764ab14e5964a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -33987,12 +33987,12 @@
 	  },
 	  headline: {
 	    fontSize: '1.8rem',
-	    lineHeight: '2.3rem',
+	    lineHeight: '2.4rem',
 	    textAlign: 'center',
 	    width: '46rem',
 	    '@media screen and (max-width: 64em)': {
 	      fontSize: '1.6rem',
-	      lineHeight: '1.8rem',
+	      lineHeight: '2rem',
 	      maxWidth: '90%',
 	      width: '90%'
 	    }

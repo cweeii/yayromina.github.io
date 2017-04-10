@@ -52,12 +52,12 @@ export default {
   },
   headline: {
     fontSize: '1.8rem',
-    lineHeight: '2.3rem',
+    lineHeight: '2.4rem',
     textAlign: 'center',
     width: '46rem',
     '@media screen and (max-width: 64em)': {
       fontSize: '1.6rem',
-      lineHeight: '1.8rem',
+      lineHeight: '2rem',
       maxWidth: '90%',
       width: '90%',
     },
