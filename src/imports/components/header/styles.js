@@ -20,14 +20,14 @@ export default {
   }),
   logoContainer: {
     alignItems: 'center',
-    fill: '#7A1E48',
+    fill: '#e93c4f',
     display: 'flex',
     flexDirection: 'row',
     fontSize: '1.6rem',
     width: '30%',
     ':hover': {
-      color: '#571B3C',
-      fill: '#571B3C',
+      color: '#ce1c5f',
+      fill: '#ce1c5f',
     },
   },
   logo: {
@@ -40,7 +40,7 @@ export default {
     position: 'relative',
     top: -20,
     ':hover': {
-      color: '#571B3C',
+      color: '#ce1c5f',
     },
     '@media screen and (max-width: 64rem)': {
       display: 'none',

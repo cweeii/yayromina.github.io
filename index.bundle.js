@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5f2362a275158cc097ec"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a9dc3045c8b1adaa7a98"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34320,7 +34320,7 @@
 	});
 	exports['default'] = {
 	  socialLink: {
-	    color: '#571B3C',
+	    color: '#e93c4f',
 	    display: 'inline-block',
 	    fontSize: '1.6rem',
 	    listStyleType: 'none',
@@ -34333,7 +34333,7 @@
 	  socialIcon: function () {
 	    function socialIcon(hover) {
 	      return {
-	        color: hover ? '#571B3C' : '#9D2053',
+	        color: hover ? '#ce1c5f' : '#e93c4f',
 	        cursor: 'pointer',
 	        display: 'block',
 	        transition: 'all 0.2s'
@@ -34427,8 +34427,8 @@
 	    function submit(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
-	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
+	        border: hover ? '1px solid rgba(353, 74, 91,0.7)' : 'none',
+	        boxShadow: hover ? 'inset 0 0 10px rgb(353, 74, 91, .2), 0 0 10px rgba(353, 74, 91, .1)' : 'inset 0 0 20px rgba(353, 74, 91, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
 	        fontSize: '1.2rem',
@@ -34436,7 +34436,7 @@
 	        lineHeight: hover ? '44px' : '45px',
 	        maxWidth: 160,
 	        outline: '0',
-	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
+	        outlineColor: hover ? 'rgba(353, 74, 91, 0)' : 'rgba(0, 0, 0, .2)',
 	        outlineOffset: hover ? 15 : 0,
 	        outlineStyle: 'solid',
 	        outlineWidth: 1,
@@ -53755,15 +53755,15 @@
 	    function base(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
-	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
+	        border: hover ? '1px solid rgba(353, 74, 91,0.7)' : 'none',
+	        boxShadow: hover ? 'inset 0 0 10px rgb(353, 74, 91, .2), 0 0 10px rgba(353, 74, 91, .1)' : 'inset 0 0 20px rgba(353, 74, 91, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
 	        fontSize: '1.2rem',
 	        height: 45,
 	        lineHeight: hover ? '44px' : '45px',
 	        outline: '0',
-	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
+	        outlineColor: hover ? 'rgba(353, 74, 91, 0)' : 'rgba(0, 0, 0, .2)',
 	        outlineOffset: hover ? 15 : 0,
 	        outlineStyle: 'solid',
 	        outlineWidth: 1,
@@ -53907,7 +53907,7 @@
 	  circle: function () {
 	    function circle(seen) {
 	      return {
-	        background: '#7A1E48',
+	        background: '#e93c4f',
 	        borderRadius: '50%',
 	        display: 'block',
 	        height: 100,
@@ -53954,7 +53954,7 @@
 	  }(),
 	  logo: {
 	    display: 'block',
-	    fill: '#7A1E48',
+	    fill: '#e93c4f',
 	    height: 100,
 	    margin: '-150px auto auto',
 	    opacity: 1,
@@ -54632,8 +54632,8 @@
 	    function button(hover) {
 	      return {
 	        background: '#FFF',
-	        border: hover ? '1px solid rgba(157, 32, 83,0.7)' : 'none',
-	        boxShadow: hover ? 'inset 0 0 10px rgb(157, 32, 83, .2), 0 0 10px rgba(157, 32, 83, .1)' : 'inset 0 0 20px rgba(157, 32, 83, 0)',
+	        border: hover ? '1px solid rgba(353, 74, 91,0.7)' : 'none',
+	        boxShadow: hover ? 'inset 0 0 10px rgb(353, 74, 91, .2), 0 0 10px rgba(353, 74, 91, .1)' : 'inset 0 0 20px rgba(353, 74, 91, 0)',
 	        cursor: 'pointer',
 	        display: 'block',
 	        fontSize: '1.2rem',
@@ -54642,7 +54642,7 @@
 	        margin: '40px auto 0',
 	        maxWidth: '90%',
 	        outline: '0',
-	        outlineColor: hover ? 'rgba(157, 32, 83, 0)' : 'rgba(0, 0, 0, .2)',
+	        outlineColor: hover ? 'rgba(353, 74, 91, 0)' : 'rgba(0, 0, 0, .2)',
 	        outlineOffset: hover ? 15 : 0,
 	        outlineStyle: 'solid',
 	        outlineWidth: 1,
@@ -55102,14 +55102,14 @@
 	  }(),
 	  logoContainer: {
 	    alignItems: 'center',
-	    fill: '#7A1E48',
+	    fill: '#e93c4f',
 	    display: 'flex',
 	    flexDirection: 'row',
 	    fontSize: '1.6rem',
 	    width: '30%',
 	    ':hover': {
-	      color: '#571B3C',
-	      fill: '#571B3C'
+	      color: '#ce1c5f',
+	      fill: '#ce1c5f'
 	    }
 	  },
 	  logo: {
@@ -55122,7 +55122,7 @@
 	    position: 'relative',
 	    top: -20,
 	    ':hover': {
-	      color: '#571B3C'
+	      color: '#ce1c5f'
 	    },
 	    '@media screen and (max-width: 64rem)': {
 	      display: 'none'

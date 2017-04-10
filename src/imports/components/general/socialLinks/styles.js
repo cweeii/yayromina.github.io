@@ -1,6 +1,6 @@
 export default{
   socialLink: {
-    color: '#571B3C',
+    color: '#e93c4f',
     display: 'inline-block',
     fontSize: '1.6rem',
     listStyleType: 'none',
@@ -11,7 +11,7 @@ export default{
     },
   },
   socialIcon: hover => ({
-    color: hover ? '#571B3C' : '#9D2053',
+    color: hover ? '#ce1c5f' : '#e93c4f',
     cursor: 'pointer',
     display: 'block',
     transition: 'all 0.2s',

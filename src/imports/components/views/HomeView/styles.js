@@ -21,7 +21,7 @@ export default {
     width: '100%',
   },
   circle: seen => ({
-    background: '#7A1E48',
+    background: '#e93c4f',
     borderRadius: '50%',
     display: 'block',
     height: 100,
@@ -46,7 +46,7 @@ export default {
   }),
   logo: {
     display: 'block',
-    fill: '#7A1E48',
+    fill: '#e93c4f',
     height: 100,
     margin: '-150px auto auto',
     opacity: 1,
