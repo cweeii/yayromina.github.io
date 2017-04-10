@@ -5,8 +5,10 @@ import Logo from 'babel!svg-react!../../../../../static/images/branding/logo.svg
 import Navigation from '../../navigation';
 import SocialLink from '../../general/socialLinks';
 import anime from 'animejs';
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class HomeView extends React.Component {
 
   static propTypes = {

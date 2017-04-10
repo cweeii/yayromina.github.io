@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react';
 
+import radium from 'radium';
 import styles from './styles';
 
+@radium
 export default class SocialLink extends React.Component {
 
   static propTypes = {

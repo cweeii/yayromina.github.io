@@ -81,14 +81,14 @@ export default {
       padding: 0,
     },
   },
-  projectLogo: mobile => ({
+  projectLogo: (mobile, emota) => ({
     display: mobile ? 'none' : 'block',
     margin: '0 auto 1.6rem',
-    maxWidth: '65%',
+    maxWidth: emota ? '47%' : '65%',
     '@media screen and (max-width: 64em)': {
       width: '100%',
       display: mobile ? 'block' : 'none',
-      maxWidth: 200,
+      maxWidth: emota ? 160 : 200,
     },
   }),
   projectImage: {

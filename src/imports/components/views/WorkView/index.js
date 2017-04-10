@@ -118,7 +118,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo(true)}
+                        style={styles.projectLogo(true, true)}
                         src="../../../../../static/images/portfolio/emota-logo.png"
                         alt="Emota Logo"
                       />
@@ -143,7 +143,7 @@ export default class WorkView extends React.Component {
                       rel="noreferrer noopener"
                     >
                       <img
-                        style={styles.projectLogo(false)}
+                        style={styles.projectLogo(false, true)}
                         src="../../../../../static/images/portfolio/emota-logo.png"
                         alt="Emota Logo"
                       />

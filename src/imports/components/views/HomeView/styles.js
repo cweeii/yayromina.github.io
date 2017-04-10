@@ -62,6 +62,9 @@ export default {
     position: 'relative',
     transform: seen ? 'translateY(80px)' : 'none',
     zIndex: '9',
+    '@media screen and (max-width: 420px)': {
+      marginTop: -20,
+    },
   }),
   navLinks: seen => ({
     marginTop: '2rem',

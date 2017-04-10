@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4d9207e1a3d1cfe523c9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "720057ea29ec5feedfef"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34217,11 +34217,15 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _class, _temp2;
+	var _class, _class2, _temp2;
 
 	var _react = __webpack_require__(383);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _radium = __webpack_require__(576);
+
+	var _radium2 = _interopRequireDefault(_radium);
 
 	var _styles = __webpack_require__(643);
 
@@ -34235,7 +34239,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var SocialLink = (_temp2 = _class = function (_React$Component) {
+	var SocialLink = (0, _radium2['default'])(_class = (_temp2 = _class2 = function (_React$Component) {
 	  _inherits(SocialLink, _React$Component);
 
 	  function SocialLink() {
@@ -34302,11 +34306,12 @@
 	  }]);
 
 	  return SocialLink;
-	}(_react2['default'].Component), _class.propTypes = {
+	}(_react2['default'].Component), _class2.propTypes = {
 	  url: _react.PropTypes.string,
 	  icon: _react.PropTypes.string,
 	  title: _react.PropTypes.string
-	}, _temp2);
+	}, _temp2)) || _class;
+
 	exports['default'] = SocialLink;
 
 /***/ },
@@ -34470,7 +34475,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _class, _temp2; //eslint-disable-line
+	var _class, _class2, _temp2; //eslint-disable-line
 
 
 	var _react = __webpack_require__(383);
@@ -34497,6 +34502,10 @@
 
 	var _animejs2 = _interopRequireDefault(_animejs);
 
+	var _radium = __webpack_require__(576);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
 	var _styles = __webpack_require__(836);
 
 	var _styles2 = _interopRequireDefault(_styles);
@@ -34509,7 +34518,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var HomeView = (_temp2 = _class = function (_React$Component) {
+	var HomeView = (0, _radium2['default'])(_class = (_temp2 = _class2 = function (_React$Component) {
 	  _inherits(HomeView, _React$Component);
 
 	  function HomeView() {
@@ -34863,11 +34872,12 @@
 	  }]);
 
 	  return HomeView;
-	}(_react2['default'].Component), _class.propTypes = {
+	}(_react2['default'].Component), _class2.propTypes = {
 	  seenAnimation: _react.PropTypes.bool,
 	  seenAnimationToggle: _react.PropTypes.func,
 	  isHome: _react.PropTypes.func
-	}, _temp2);
+	}, _temp2)) || _class;
+
 	exports['default'] = HomeView;
 
 /***/ },
@@ -53971,7 +53981,10 @@
 	        opacity: seen ? '1' : '0',
 	        position: 'relative',
 	        transform: seen ? 'translateY(80px)' : 'none',
-	        zIndex: '9'
+	        zIndex: '9',
+	        '@media screen and (max-width: 420px)': {
+	          marginTop: -20
+	        }
 	      };
 	    }
 
@@ -54226,7 +54239,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo(true),
+	                          style: _styles2['default'].projectLogo(true, true),
 	                          src: '../../../../../static/images/portfolio/emota-logo.png',
 	                          alt: 'Emota Logo'
 	                        })
@@ -54257,7 +54270,7 @@
 	                          rel: 'noreferrer noopener'
 	                        },
 	                        _react2['default'].createElement('img', {
-	                          style: _styles2['default'].projectLogo(false),
+	                          style: _styles2['default'].projectLogo(false, true),
 	                          src: '../../../../../static/images/portfolio/emota-logo.png',
 	                          alt: 'Emota Logo'
 	                        })
@@ -54756,15 +54769,15 @@
 	    }
 	  },
 	  projectLogo: function () {
-	    function projectLogo(mobile) {
+	    function projectLogo(mobile, emota) {
 	      return {
 	        display: mobile ? 'none' : 'block',
 	        margin: '0 auto 1.6rem',
-	        maxWidth: '65%',
+	        maxWidth: emota ? '47%' : '65%',
 	        '@media screen and (max-width: 64em)': {
 	          width: '100%',
 	          display: mobile ? 'block' : 'none',
-	          maxWidth: 200
+	          maxWidth: emota ? 160 : 200
 	        }
 	      };
 	    }
