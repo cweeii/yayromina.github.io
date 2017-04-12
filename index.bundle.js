@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "720057ea29ec5feedfef"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7819d2b5eac5f573658a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -17910,23 +17910,6 @@
 	                  'Gus'
 	                ),
 	                '.'
-	              ),
-	              _react2['default'].createElement(
-	                'p',
-	                { style: _styles2['default'].footerType },
-	                'Looking for a resume? ',
-	                _react2['default'].createElement(
-	                  'a',
-	                  { href: '../../../static/RominaBarrett_Resume.pdf', target: '_blank' },
-	                  'Download it here'
-	                ),
-	                ' and feel free to check out my ',
-	                _react2['default'].createElement(
-	                  'a',
-	                  { href: 'https://www.linkedin.com/in/rominabarrett/', target: '_blank' },
-	                  'LinkedIn'
-	                ),
-	                '!'
 	              )
 	            )
 	          )
